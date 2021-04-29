@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+{% block header %}
+
+<header>        
+    <a href="/consultas" target="_blank">Consultas</a>
+    <a href="/medicamentos" target="_blank">Medicamentos</a>
+    <a href="src/views/sobre" target="_blank">Sobre</a>               
+</header>
+    
+{% endblock %}
+
+{% block content %}
+<span>
+    <h2>Seja bem vindo!</h2>
+    <h1>CUIDE</h1>
+</span>
+
+<main>
+    <button><a href="/cuidador">Sou cuidador</a></button>
+    <button><a href="/idoso">Serei cuidado</a></button>
+</main>
+
+
+    
+{% endblock %}
+
+</body>
+</html>

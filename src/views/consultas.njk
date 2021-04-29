@@ -1,0 +1,44 @@
+{% extends "home.njk" %}
+
+
+{%block content%}
+
+        <form action="/save" method ="POST">
+            <main class="form-medicamento">
+                <h1>Consultas</h1>
+
+                <div class="field-group">
+                    <div class="field">
+                        <label for="name">Médico</label>
+                        <input type="text" name="name" required="required">
+                    </div>
+
+                    <div class="field">
+                        <label for="name">Especialidade</label>
+                        <input type="text" name="qtd" required="required">
+                    </div>
+                </div>
+
+                <div class="field-group2">
+                    
+                    <div class="field">
+                        <label for="name">Data</label>
+                        <input type="date" name="date" required="required">
+                    </div>
+
+                    <div class="field">
+                        <label for="name">Horário</label>
+                        <input type="time" name="hour" required="required">
+                    </div>
+                    
+                </div>
+
+                <div class="field">
+                        <label for="name">Local</label>
+                        <input type="text" name="hour" required="required">
+                </div>
+
+                <button class="button-save">Salvar</button>
+            </main>
+        </form>
+{%endblock%}
