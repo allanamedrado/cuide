@@ -6,14 +6,15 @@ Tutorial:
 
 -veja quais são as tags que já existem:<br>
 git tag<br>
-exemplo de resultado: 
-v1.0.0
-v1.0.1
-v1.0.2
-v1.0.3
+exemplo de resultado: <br><br>
 
-então a partir dai você cria na sequencia
+v1.0.0<br>
+v1.0.1<br>
+v1.0.2<br>
+v1.0.3<br>
 
+então a partir dai você cria na sequencia<br>
+<br>
 -git tag v1.0.4
 
 -git push origin main v1.0.4
