@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a85fb80-c076-4031-b245-59b6e67bea65" name="Default Changelist" comment="" />
+    <list default="true" id="1a85fb80-c076-4031-b245-59b6e67bea65" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/src/app/controllers/cuidador.js" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/app/controllers/cuidador.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/src/views/cuidador.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/cuidador.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/create.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/create.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/edit.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/edit.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/index.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/index.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/show.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/show.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/src/views/home.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/home.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/cuidador.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/cuidador.njk" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,7 +128,7 @@
       <option name="presentableId" value="Default" />
       <updated>1619887816211</updated>
       <workItem from="1619887818172" duration="801000" />
-      <workItem from="1620059864035" duration="11533000" />
+      <workItem from="1620059864035" duration="12127000" />
     </task>
     <servers />
   </component>
