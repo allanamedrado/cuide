@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Sintoma index{% endblock %}
+
+{% block body %}
+    <h1>Sintoma index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>SintomaId</th>
+                <th>Alteracoes</th>
+                <th>LocalAlteracoes</th>
+                <th>LocalDores</th>
+                <th>Observacoes</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for sintoma in sintomas %}
+            <tr>
+                <td>{{ sintoma.sintomaId }}</td>
+                <td>{{ sintoma.alteracoes ? 'Yes' : 'No' }}</td>
+                <td>{{ sintoma.localAlteracoes }}</td>
+                <td>{{ sintoma.localDores }}</td>
+                <td>{{ sintoma.observacoes }}</td>
+                <td>
+                    <a href="{{ path('sintoma_show', {'sintomaId': sintoma.sintomaId}) }}">show</a>
+                    <a href="{{ path('sintoma_edit', {'sintomaId': sintoma.sintomaId}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('sintoma_new') }}">Create new</a>
+{% endblock %}
