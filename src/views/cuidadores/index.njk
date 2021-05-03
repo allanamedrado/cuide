@@ -1,0 +1,27 @@
+{% extends "home.njk" %}
+
+{%block content%}
+
+{% if total > 0 %}
+         <h4>
+            <strong>{{total}} cuidadores</strong>
+            encontrados
+          </h4>
+
+    <div class="cards">
+
+        {% for cuidador in cuidadores %}
+            <div class="card">
+                <h1>{{ cuidador.name }}</h1>
+                <h3>{{ cuidador.mail }}</h3> 
+                <a href="/cuidadores/{{cuidador.id}}">Visualizar</a>               
+            </div>
+        {% endfor %}
+    </div>
+
+{%else%}
+
+    <h4><strong>Nenhum</strong> cuidador encontrado</h4>
+
+{% endif %}
+{%endblock%}

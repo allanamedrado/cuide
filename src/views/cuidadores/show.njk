@@ -1,0 +1,41 @@
+{%extends "home.njk"%}
+
+{%block content%}
+
+    <section class="details">
+
+        <h3>
+            Informações do cuidador
+        </h3>
+
+        {% for cuidador in cuidadores %}
+        <div class="item">
+            <div>Cuidador</div>
+            <div>
+                {{ cuidador.name }}
+            </div>
+        </div>
+
+        <div class="item">
+            <div>CPF</div>
+            <div>
+                {{cuidador.cpf}}
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Data de nascimento</div>
+            <div>{{cuidador.birth}}</div>
+        </div>
+
+        <div class="item">
+            <div>Email</div>
+            <div>{{cuidador.mail}}
+            </div>
+        </div>
+              
+
+        <a href="/cuidadores/{{cuidador.id}}/edit" class="button">Editar</a>
+        {% endfor %}
+    </section>
+    {%endblock%}

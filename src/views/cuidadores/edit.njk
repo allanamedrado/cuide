@@ -1,0 +1,36 @@
+{% extends "home.njk" %}
+
+{% block content %}
+    <div class="card">
+        
+        <section class="details">
+
+            <form method="POST" action="/cuidadores?_method=PUT">
+                <h3>
+                    Editar Informações do cuidador
+                </h3>
+
+                {% include "fields.njk" %}
+
+                <input type="hidden" name="id" value="{{cuidador.id}}">
+            </form>
+
+            <form id="delete" action="/cuidadores?_method=DELETE" method="post">
+                <input type="hidden" name="id" value="{{cuidador.id}}">
+                <button type="submit">Deletar</button>
+            </form>  
+
+            <script>
+                const formDelete = document.querySelector("#delete")
+                formDelete.addEventListener("sumbit", function(event) {
+                   const confirmation = confirm("Deseja deletar?")
+                   if(!confirmation) {
+                        event.preventDefault()   
+                 }
+                })
+            </script>           
+
+        </section>
+    </div>
+
+{% endblock content %}

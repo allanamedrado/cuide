@@ -12,24 +12,30 @@ module.exports = {
             }
         }
 
-        const query = `
-            INSERT INTO cuidador (
-                name,
-                birth,
-                mail,
-                image,                
-                cpf
-            ) VALUES ($1, $2, $3, $4, $5)
-                RETURNING id        
+        const query = `INSERT INTO cuidador (
+            name,
+            cpf,
+            birth,
+            mail,
+            image, 
+            username,
+            passw
+        ) VALUES ($1, $2, $3, $4, $5, $6, $7)
+            RETURNING id        
         `
 
         const values = [
             req.body.name,
+            req.body.cpf,
             date(req.body.birth).iso,
             req.body.mail,
             req.body.image,            
-            req.body.cpf
+            req.body.username,
+            req.body.password
         ]
+
+        console.log(values)
+        console.log(req.body)
 
         db.query(query, values, function(err, results) {
             if (err) return res.send(err)

@@ -19,10 +19,10 @@ routes.get("/idoso", function(req, res) {
     return res.render("idoso")
 })
 
-routes.get("/cuidador", function(req, res) {
-    return res.render("cuidador")
+routes.get("/cuidadores/create", function(req, res) {
+    return res.render("cuidadores/create")
 })
 
-routes.post("/cuidador", cuidador.post)
+routes.post("/cuidadores", cuidador.post)
 
 module.exports = routes
