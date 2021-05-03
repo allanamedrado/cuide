@@ -6,4 +6,4 @@ Tutorial:
 
 -git tag v1.0.0
 
--git push origin master v1.0.0
+-git push origin main v1.0.0
