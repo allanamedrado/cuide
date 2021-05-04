@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Idoso{% endblock %}
+
+{% block body %}
+    <h1>Edit Idoso</h1>
+
+    {{ include('idoso/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('idoso_index') }}">back to list</a>
+
+    {{ include('idoso/_delete_form.html.twig') }}
+{% endblock %}

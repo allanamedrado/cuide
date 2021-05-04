@@ -23,9 +23,8 @@ routes.get("/cuidadores/create", function(req, res) {
     return res.render("cuidadores/create")
 })
 
-routes.get("/cuidadores", cuidadores.index)
 routes.get("/cuidadores/index", cuidadores.index)
-routes.get("/cuidadores/cadastro", cuidadores.create)
+routes.get("/cuidadores/create", cuidadores.create)
 routes.get("/cuidadores/:id", cuidadores.show)
 routes.get("/cuidadores/:id/edit", cuidadores.edit)
 routes.post("/cuidadores", cuidadores.post)

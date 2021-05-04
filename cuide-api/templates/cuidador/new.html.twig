@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Cuidador{% endblock %}
+
+{% block body %}
+    <h1>Create new Cuidador</h1>
+
+    {{ include('cuidador/_form.html.twig') }}
+
+    <a href="{{ path('cuidador_index') }}">back to list</a>
+{% endblock %}

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1a85fb80-c076-4031-b245-59b6e67bea65" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/src/app/controllers/cuidador.js" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/app/controllers/cuidador.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/src/views/cuidador.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/cuidador.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/create.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/create.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/edit.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/edit.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/index.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/index.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/show.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/show.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/src/views/home.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/home.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/cuidador.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/cuidador.njk" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/cuide-api/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/cuide-api/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/composer" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/doctrine/sql-formatter" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/laminas/laminas-code" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/laminas/laminas-eventmanager" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/laminas/laminas-zendframework-bridge" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/proxy-manager-bridge" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/friendsofphp/proxy-manager-lts" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/validator" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1rwWpTSZAt7SANuKzSiyVSe5hvT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1a85fb80-c076-4031-b245-59b6e67bea65" name="Default Changelist" comment="" />
+      <created>1619887816211</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619887816211</updated>
+      <workItem from="1619887818172" duration="801000" />
+      <workItem from="1620059864035" duration="12127000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

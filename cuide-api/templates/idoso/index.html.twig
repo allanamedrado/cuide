@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Idoso index{% endblock %}
+
+{% block body %}
+    <h1>Idoso index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdosoId</th>
+                <th>Nome</th>
+                <th>Cpf</th>
+                <th>Email</th>
+                <th>DataNascimento</th>
+                <th>Endereco</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for idoso in idosos %}
+            <tr>
+                <td>{{ idoso.idosoId }}</td>
+                <td>{{ idoso.nome }}</td>
+                <td>{{ idoso.cpf }}</td>
+                <td>{{ idoso.email }}</td>
+                <td>{{ idoso.dataNascimento ? idoso.dataNascimento|date('Y-m-d') : '' }}</td>
+                <td>{{ idoso.endereco }}</td>
+                <td>
+                    <a href="{{ path('idoso_show', {'idosoId': idoso.idosoId}) }}">show</a>
+                    <a href="{{ path('idoso_edit', {'idosoId': idoso.idosoId}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('idoso_new') }}">Create new</a>
+{% endblock %}
