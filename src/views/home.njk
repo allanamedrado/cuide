@@ -12,10 +12,19 @@
 
 {% block header %}
 
-<header>        
-    <a href="/consultas" target="_blank">Consultas</a>
-    <a href="/medicamentos" target="_blank">Medicamentos</a>
-    <a href="src/views/sobre" target="_blank">Sobre</a>               
+<header>  
+<div class="menu-section">
+        <div class="menu-toggle">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
+    <nav>
+        <a href="/" target="_blank">Home</a>      
+        <a href="/consultas" target="_blank">Consultas</a>
+        <a href="/medicamentos" target="_blank">Medicamentos</a>
+    </nav>    
+</div>          
 </header>
     
 {% endblock %}
@@ -31,8 +40,6 @@
     <button><a href="/idoso">Serei cuidado</a></button>
 </main>
 
-
-    
 {% endblock %}
 
 </body>
