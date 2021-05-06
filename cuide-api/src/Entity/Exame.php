@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Exame
  *
- * @ORM\Table(name="exame")
+ * @ORM\Table(name="exame", indexes={@ORM\Index(name="fk_exame_usuario1_idx", columns={"usuario_idUsuario"}), @ORM\Index(name="fk_exame_idoso1_idx", columns={"idoso_idoso_id"})})
  * @ORM\Entity
  */
 class Exame
@@ -43,68 +43,24 @@ class Exame
     private $local;
 
     /**
-     * @return int
+     * @var \Idoso
+     *
+     * @ORM\ManyToOne(targetEntity="Idoso")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idoso_idoso_id", referencedColumnName="idoso_id")
+     * })
      */
-    public function getExameId()
-    {
-        return $this->exameId;
-    }
+    private $idosoIdoso;
 
     /**
-     * @param int $exameId
+     * @var \Usuario
+     *
+     * @ORM\ManyToOne(targetEntity="Usuario")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="usuario_idUsuario", referencedColumnName="idUsuario")
+     * })
      */
-    public function setExameId(int $exameId)
-    {
-        $this->exameId = $exameId;
-    }
-
-    /**
-     * @return string
-     */
-    public function getNome()
-    {
-        return $this->nome;
-    }
-
-    /**
-     * @param string $nome
-     */
-    public function setNome(string $nome)
-    {
-        $this->nome = $nome;
-    }
-
-    /**
-     * @return string
-     */
-    public function getData()
-    {
-        return $this->data;
-    }
-
-    /**
-     * @param string $data
-     */
-    public function setData(string $data)
-    {
-        $this->data = $data;
-    }
-
-    /**
-     * @return string
-     */
-    public function getLocal()
-    {
-        return $this->local;
-    }
-
-    /**
-     * @param string $local
-     */
-    public function setLocal(string $local)
-    {
-        $this->local = $local;
-    }
+    private $usuarioIdusuario;
 
 
 }

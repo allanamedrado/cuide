@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Sintoma
  *
- * @ORM\Table(name="sintoma")
+ * @ORM\Table(name="sintoma", indexes={@ORM\Index(name="fk_sintoma_usuario1_idx", columns={"usuario_idUsuario"}), @ORM\Index(name="fk_sintoma_idoso1_idx", columns={"idoso_idoso_id"})})
  * @ORM\Entity
  */
 class Sintoma
@@ -50,84 +50,24 @@ class Sintoma
     private $observacoes;
 
     /**
-     * @return int
+     * @var \Idoso
+     *
+     * @ORM\ManyToOne(targetEntity="Idoso")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idoso_idoso_id", referencedColumnName="idoso_id")
+     * })
      */
-    public function getSintomaId(): int
-    {
-        return $this->sintomaId;
-    }
+    private $idosoIdoso;
 
     /**
-     * @param int $sintomaId
+     * @var \Usuario
+     *
+     * @ORM\ManyToOne(targetEntity="Usuario")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="usuario_idUsuario", referencedColumnName="idUsuario")
+     * })
      */
-    public function setSintomaId(int $sintomaId): void
-    {
-        $this->sintomaId = $sintomaId;
-    }
-
-    /**
-     * @return bool
-     */
-    public function isAlteracoes()
-    {
-        return $this->alteracoes;
-    }
-
-    /**
-     * @param bool $alteracoes
-     */
-    public function setAlteracoes(bool $alteracoes)
-    {
-        $this->alteracoes = $alteracoes;
-    }
-
-    /**
-     * @return string
-     */
-    public function getLocalAlteracoes()
-    {
-        return $this->localAlteracoes;
-    }
-
-    /**
-     * @param string $localAlteracoes
-     */
-    public function setLocalAlteracoes(string $localAlteracoes)
-    {
-        $this->localAlteracoes = $localAlteracoes;
-    }
-
-    /**
-     * @return string
-     */
-    public function getLocalDores()
-    {
-        return $this->localDores;
-    }
-
-    /**
-     * @param string $localDores
-     */
-    public function setLocalDores(string $localDores)
-    {
-        $this->localDores = $localDores;
-    }
-
-    /**
-     * @return string
-     */
-    public function getObservacoes()
-    {
-        return $this->observacoes;
-    }
-
-    /**
-     * @param string $observacoes
-     */
-    public function setObservacoes(string $observacoes)
-    {
-        $this->observacoes = $observacoes;
-    }
+    private $usuarioIdusuario;
 
 
 }

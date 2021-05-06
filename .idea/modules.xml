@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../chat-socketio/.idea/chat-socketio.iml" filepath="$PROJECT_DIR$/../chat-socketio/.idea/chat-socketio.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/cuide.iml" filepath="$PROJECT_DIR$/.idea/cuide.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../my-chat/.idea/my-chat.iml" filepath="$PROJECT_DIR$/../my-chat/.idea/my-chat.iml" />
     </modules>
   </component>
 </project>

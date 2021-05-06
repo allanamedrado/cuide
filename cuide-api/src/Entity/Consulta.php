@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Consulta
  *
- * @ORM\Table(name="consulta")
+ * @ORM\Table(name="consulta", indexes={@ORM\Index(name="fk_consulta_usuario1_idx", columns={"usuario_idUsuario"}), @ORM\Index(name="fk_consulta_idoso1_idx", columns={"idoso_idoso_id"})})
  * @ORM\Entity
  */
 class Consulta
@@ -57,103 +57,24 @@ class Consulta
     private $local;
 
     /**
-     * @return int
+     * @var \Idoso
+     *
+     * @ORM\ManyToOne(targetEntity="Idoso")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idoso_idoso_id", referencedColumnName="idoso_id")
+     * })
      */
-    public function getConsultaId()
-    {
-        return $this->consultaId;
-    }
+    private $idosoIdoso;
 
     /**
-     * @return string
+     * @var \Usuario
+     *
+     * @ORM\ManyToOne(targetEntity="Usuario")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="usuario_idUsuario", referencedColumnName="idUsuario")
+     * })
      */
-    public function getMedico()
-    {
-        return $this->medico;
-    }
-
-    /**
-     * @return string
-     */
-    public function getEspecialidade()
-    {
-        return $this->especialidade;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getData()
-    {
-        return $this->data;
-    }
-
-    /**
-     * @return string
-     */
-    public function getHora()
-    {
-        return $this->hora;
-    }
-
-    /**
-     * @return string
-     */
-    public function getLocal()
-    {
-        return $this->local;
-    }
-
-    /**
-     * @param string $medico
-     */
-    public function setMedico(string $medico): void
-    {
-        $this->medico = $medico;
-    }
-
-    /**
-     * @param string $especialidade
-     */
-    public function setEspecialidade(string $especialidade): void
-    {
-        $this->especialidade = $especialidade;
-    }
-
-    /**
-     * @param \DateTime $data
-     */
-    public function setData(\DateTime $data): void
-    {
-        $this->data = $data;
-    }
-
-    /**
-     * @param string $hora
-     */
-    public function setHora(string $hora): void
-    {
-        $this->hora = $hora;
-    }
-
-    /**
-     * @param string $local
-     */
-    public function setLocal(string $local): void
-    {
-        $this->local = $local;
-    }
+    private $usuarioIdusuario;
 
 
-    public function toArray()
-    {
-        return [
-            'id' => $this->getConsultaId(),
-            'especialidade' => $this->getEspecialidade(),
-            'data' => $this->getData(),
-            'hora' => $this->getHora(),
-            'local' => $this->getLocal(),
-            'medico' => $this->getMedico(),
-        ];
-    }
 }

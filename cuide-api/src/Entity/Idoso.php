@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Idoso
  *
- * @ORM\Table(name="idoso", indexes={@ORM\Index(name="fk_idoso_exame1_idx", columns={"exame_exame_id"}), @ORM\Index(name="fk_idoso_consulta1_idx", columns={"consulta_consulta_id"}), @ORM\Index(name="fk_idoso_sintoma1_idx", columns={"sintoma_sintoma_id"}), @ORM\Index(name="fk_idoso_medicamento1_idx", columns={"medicamento_medicamento_id"})})
+ * @ORM\Table(name="idoso", indexes={@ORM\Index(name="fk_idoso_Usuario1_idx", columns={"Usuario_idUsuario"})})
  * @ORM\Entity
  */
 class Idoso
@@ -57,44 +57,14 @@ class Idoso
     private $endereco;
 
     /**
-     * @var \Consulta
+     * @var \Usuario
      *
-     * @ORM\ManyToOne(targetEntity="Consulta")
+     * @ORM\ManyToOne(targetEntity="Usuario")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="consulta_consulta_id", referencedColumnName="consulta_id")
+     *   @ORM\JoinColumn(name="Usuario_idUsuario", referencedColumnName="idUsuario")
      * })
      */
-    private $consultaConsulta;
-
-    /**
-     * @var \Exame
-     *
-     * @ORM\ManyToOne(targetEntity="Exame")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="exame_exame_id", referencedColumnName="exame_id")
-     * })
-     */
-    private $exameExame;
-
-    /**
-     * @var \Medicamento
-     *
-     * @ORM\ManyToOne(targetEntity="Medicamento")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="medicamento_medicamento_id", referencedColumnName="medicamento_id")
-     * })
-     */
-    private $medicamentoMedicamento;
-
-    /**
-     * @var \Sintoma
-     *
-     * @ORM\ManyToOne(targetEntity="Sintoma")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="sintoma_sintoma_id", referencedColumnName="sintoma_id")
-     * })
-     */
-    private $sintomaSintoma;
+    private $usuarioIdusuario;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
@@ -118,183 +88,5 @@ class Idoso
     {
         $this->cuidadorCuidador = new \Doctrine\Common\Collections\ArrayCollection();
     }
-
-    /**
-     * @return int
-     */
-    public function getIdosoId()
-    {
-        return $this->idosoId;
-    }
-
-    /**
-     * @param int $idosoId
-     */
-    public function setIdosoId(int $idosoId)
-    {
-        $this->idosoId = $idosoId;
-    }
-
-    /**
-     * @return string
-     */
-    public function getNome()
-    {
-        return $this->nome;
-    }
-
-    /**
-     * @param string $nome
-     */
-    public function setNome(string $nome)
-    {
-        $this->nome = $nome;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCpf()
-    {
-        return $this->cpf;
-    }
-
-    /**
-     * @param string $cpf
-     */
-    public function setCpf(string $cpf)
-    {
-        $this->cpf = $cpf;
-    }
-
-    /**
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    /**
-     * @param string $email
-     */
-    public function setEmail(string $email)
-    {
-        $this->email = $email;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getDataNascimento()
-    {
-        return $this->dataNascimento;
-    }
-
-    /**
-     * @param \DateTime $dataNascimento
-     */
-    public function setDataNascimento(\DateTime $dataNascimento)
-    {
-        $this->dataNascimento = $dataNascimento;
-    }
-
-    /**
-     * @return string
-     */
-    public function getEndereco()
-    {
-        return $this->endereco;
-    }
-
-    /**
-     * @param string $endereco
-     */
-    public function setEndereco(string $endereco)
-    {
-        $this->endereco = $endereco;
-    }
-
-    /**
-     * @return \Consulta
-     */
-    public function getConsultaConsulta()
-    {
-        return $this->consultaConsulta;
-    }
-
-    /**
-     * @param \Consulta $consultaConsulta
-     */
-    public function setConsultaConsulta(\Consulta $consultaConsulta)
-    {
-        $this->consultaConsulta = $consultaConsulta;
-    }
-
-    /**
-     * @return \Exame
-     */
-    public function getExameExame()
-    {
-        return $this->exameExame;
-    }
-
-    /**
-     * @param \Exame $exameExame
-     */
-    public function setExameExame(\Exame $exameExame)
-    {
-        $this->exameExame = $exameExame;
-    }
-
-    /**
-     * @return \Medicamento
-     */
-    public function getMedicamentoMedicamento()
-    {
-        return $this->medicamentoMedicamento;
-    }
-
-    /**
-     * @param \Medicamento $medicamentoMedicamento
-     */
-    public function setMedicamentoMedicamento(\Medicamento $medicamentoMedicamento)
-    {
-        $this->medicamentoMedicamento = $medicamentoMedicamento;
-    }
-
-    /**
-     * @return \Sintoma
-     */
-    public function getSintomaSintoma()
-    {
-        return $this->sintomaSintoma;
-    }
-
-    /**
-     * @param \Sintoma $sintomaSintoma
-     */
-    public function setSintomaSintoma(\Sintoma $sintomaSintoma)
-    {
-        $this->sintomaSintoma = $sintomaSintoma;
-    }
-
-    /**
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getCuidadorCuidador()
-    {
-        return $this->cuidadorCuidador;
-    }
-
-    /**
-     * @param \Doctrine\Common\Collections\Collection $cuidadorCuidador
-     */
-    public function setCuidadorCuidador($cuidadorCuidador): void
-    {
-        $this->cuidadorCuidador = $cuidadorCuidador;
-    }
-
-
 
 }

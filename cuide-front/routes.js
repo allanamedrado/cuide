@@ -18,7 +18,9 @@ routes.get("/medicamentos", function(req, res){
 routes.get("/idoso", function(req, res) {
     return res.render("idoso")
 })
-
+routes.get("/chat", function(req, res) {
+    return res.render("chat")
+})
 routes.get("/cuidadores/create", function(req, res) {
     return res.render("cuidadores/create")
 })

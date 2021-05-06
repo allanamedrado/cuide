@@ -81,5 +81,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="chat-socketio" />
+    <orderEntry type="module" module-name="my-chat" />
   </component>
 </module>

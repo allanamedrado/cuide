@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Medicamento
  *
- * @ORM\Table(name="medicamento")
+ * @ORM\Table(name="medicamento", indexes={@ORM\Index(name="fk_medicamento_usuario1_idx", columns={"usuario_idUsuario"}), @ORM\Index(name="fk_medicamento_idoso1_idx", columns={"idoso_idoso_id"})})
  * @ORM\Entity
  */
 class Medicamento
@@ -64,116 +64,24 @@ class Medicamento
     private $horario;
 
     /**
-     * @return int
+     * @var \Idoso
+     *
+     * @ORM\ManyToOne(targetEntity="Idoso")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idoso_idoso_id", referencedColumnName="idoso_id")
+     * })
      */
-    public function getMedicamentoId()
-    {
-        return $this->medicamentoId;
-    }
+    private $idosoIdoso;
 
     /**
-     * @param int $medicamentoId
+     * @var \Usuario
+     *
+     * @ORM\ManyToOne(targetEntity="Usuario")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="usuario_idUsuario", referencedColumnName="idUsuario")
+     * })
      */
-    public function setMedicamentoId(int $medicamentoId)
-    {
-        $this->medicamentoId = $medicamentoId;
-    }
-
-    /**
-     * @return string
-     */
-    public function getNome()
-    {
-        return $this->nome;
-    }
-
-    /**
-     * @param string $nome
-     */
-    public function setNome(string $nome)
-    {
-        $this->nome = $nome;
-    }
-
-    /**
-     * @return string
-     */
-    public function getQuantidade()
-    {
-        return $this->quantidade;
-    }
-
-    /**
-     * @param string $quantidade
-     */
-    public function setQuantidade(string $quantidade)
-    {
-        $this->quantidade = $quantidade;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDosagem()
-    {
-        return $this->dosagem;
-    }
-
-    /**
-     * @param string $dosagem
-     */
-    public function setDosagem(string $dosagem)
-    {
-        $this->dosagem = $dosagem;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getDataInicio()
-    {
-        return $this->dataInicio;
-    }
-
-    /**
-     * @param \DateTime $dataInicio
-     */
-    public function setDataInicio(\DateTime $dataInicio)
-    {
-        $this->dataInicio = $dataInicio;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getDataFim()
-    {
-        return $this->dataFim;
-    }
-
-    /**
-     * @param \DateTime $dataFim
-     */
-    public function setDataFim(\DateTime $dataFim)
-    {
-        $this->dataFim = $dataFim;
-    }
-
-    /**
-     * @return string
-     */
-    public function getHorario()
-    {
-        return $this->horario;
-    }
-
-    /**
-     * @param string $horario
-     */
-    public function setHorario(string $horario)
-    {
-        $this->horario = $horario;
-    }
+    private $usuarioIdusuario;
 
 
 }
