@@ -100,6 +100,16 @@
       <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/wrapper.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/wrapper.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../chat-socketio/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../chat-socketio/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MODEL_CUIDE.png" beforeDir="false" afterPath="$PROJECT_DIR$/MODEL_CUIDE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Consulta.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Consulta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Cuidador.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Cuidador.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Exame.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Exame.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Idoso.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Idoso.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Medicamento.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Medicamento.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Sintoma.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Sintoma.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Usuario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-script.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +237,7 @@
       <updated>1619887816211</updated>
       <workItem from="1619887818172" duration="801000" />
       <workItem from="1620059864035" duration="14117000" />
-      <workItem from="1620315947950" duration="9207000" />
+      <workItem from="1620315947950" duration="11796000" />
     </task>
     <servers />
   </component>
