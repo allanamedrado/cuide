@@ -97,6 +97,19 @@ span a{
     background-color: #4291CA;
     padding: 10px;
 }
+.form-informacoes{
+    background-color: #4291CA;
+    padding: 10px;
+}
+
+.form-exames{
+    background-color: #4291CA;
+    padding: 10px;
+}
+
+.form-exames input{
+    border-radius: 8px;
+}
 
 .field{
     display: flex;

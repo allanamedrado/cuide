@@ -11,6 +11,14 @@ routes.get("/consultas", function(req, res){
     return res.render("consultas")
 })
 
+routes.get("/informacoes", function(req, res){
+    return res.render("informacoes")
+})
+
+routes.get("/exames", function(req, res){
+    return res.render("exames")
+})
+
 routes.get("/medicamentos", function(req, res){
     return res.render("medicamentos")
 })
