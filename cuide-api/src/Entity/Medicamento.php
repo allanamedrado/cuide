@@ -83,5 +83,163 @@ class Medicamento
      */
     private $usuarioIdusuario;
 
+    /**
+     * @return int
+     */
+    public function getMedicamentoId(): int
+    {
+        return $this->medicamentoId;
+    }
+
+    /**
+     * @param int $medicamentoId
+     */
+    public function setMedicamentoId(int $medicamentoId): void
+    {
+        $this->medicamentoId = $medicamentoId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNome(): string
+    {
+        return $this->nome;
+    }
+
+    /**
+     * @param string $nome
+     */
+    public function setNome(string $nome): void
+    {
+        $this->nome = $nome;
+    }
+
+    /**
+     * @return string
+     */
+    public function getQuantidade(): string
+    {
+        return $this->quantidade;
+    }
+
+    /**
+     * @param string $quantidade
+     */
+    public function setQuantidade(string $quantidade): void
+    {
+        $this->quantidade = $quantidade;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDosagem(): string
+    {
+        return $this->dosagem;
+    }
+
+    /**
+     * @param string $dosagem
+     */
+    public function setDosagem(string $dosagem): void
+    {
+        $this->dosagem = $dosagem;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDataInicio(): \DateTime
+    {
+        return $this->dataInicio;
+    }
+
+    /**
+     * @param \DateTime $dataInicio
+     */
+    public function setDataInicio(\DateTime $dataInicio): void
+    {
+        $this->dataInicio = $dataInicio;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDataFim(): \DateTime
+    {
+        return $this->dataFim;
+    }
+
+    /**
+     * @param \DateTime $dataFim
+     */
+    public function setDataFim(\DateTime $dataFim): void
+    {
+        $this->dataFim = $dataFim;
+    }
+
+    /**
+     * @return string
+     */
+    public function getHorario(): string
+    {
+        return $this->horario;
+    }
+
+    /**
+     * @param string $horario
+     */
+    public function setHorario(string $horario): void
+    {
+        $this->horario = $horario;
+    }
+
+    /**
+     * @return \Idoso
+     */
+    public function getIdosoIdoso(): \Idoso
+    {
+        return $this->idosoIdoso;
+    }
+
+    /**
+     * @param \Idoso $idosoIdoso
+     */
+    public function setIdosoIdoso(\Idoso $idosoIdoso): void
+    {
+        $this->idosoIdoso = $idosoIdoso;
+    }
+
+    /**
+     * @return \Usuario
+     */
+    public function getUsuarioIdusuario(): \Usuario
+    {
+        return $this->usuarioIdusuario;
+    }
+
+    /**
+     * @param \Usuario $usuarioIdusuario
+     */
+    public function setUsuarioIdusuario(\Usuario $usuarioIdusuario): void
+    {
+        $this->usuarioIdusuario = $usuarioIdusuario;
+    }
+
+    public function toArray()
+    {
+        return [
+            'idmedicamento' => $this->getMedicamentoId(),
+            'nome' => $this->getNome(),
+            'quantidade' => $this->getQuantidade(),
+            'dosagem' => $this->getDosagem(),
+            'data_inicio' => $this->getDataInicio(),
+            'data_fim' => $this->getDataFim(),
+            'horario' => $this->getHorario(),
+            'ididoso' => $this->getIdosoIdoso(),
+            'idusuario' => $this->getUsuarioIdusuario(),
+        ];
+    }
 
 }

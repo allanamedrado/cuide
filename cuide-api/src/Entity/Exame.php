@@ -62,5 +62,111 @@ class Exame
      */
     private $usuarioIdusuario;
 
+    /**
+     * @return int
+     */
+    public function getExameId(): int
+    {
+        return $this->exameId;
+    }
 
+    /**
+     * @param int $exameId
+     */
+    public function setExameId(int $exameId): void
+    {
+        $this->exameId = $exameId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNome(): string
+    {
+        return $this->nome;
+    }
+
+    /**
+     * @param string $nome
+     */
+    public function setNome(string $nome): void
+    {
+        $this->nome = $nome;
+    }
+
+    /**
+     * @return string
+     */
+    public function getData(): string
+    {
+        return $this->data;
+    }
+
+    /**
+     * @param string $data
+     */
+    public function setData(string $data): void
+    {
+        $this->data = $data;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLocal(): string
+    {
+        return $this->local;
+    }
+
+    /**
+     * @param string $local
+     */
+    public function setLocal(string $local): void
+    {
+        $this->local = $local;
+    }
+
+    /**
+     * @return \Idoso
+     */
+    public function getIdosoIdoso(): \Idoso
+    {
+        return $this->idosoIdoso;
+    }
+
+    /**
+     * @param \Idoso $idosoIdoso
+     */
+    public function setIdosoIdoso(\Idoso $idosoIdoso): void
+    {
+        $this->idosoIdoso = $idosoIdoso;
+    }
+
+    /**
+     * @return \Usuario
+     */
+    public function getUsuarioIdusuario(): \Usuario
+    {
+        return $this->usuarioIdusuario;
+    }
+
+    /**
+     * @param \Usuario $usuarioIdusuario
+     */
+    public function setUsuarioIdusuario(\Usuario $usuarioIdusuario): void
+    {
+        $this->usuarioIdusuario = $usuarioIdusuario;
+    }
+
+    public function toArray()
+    {
+        return [
+            'idexame' => $this->getExameId(),
+            'nome' => $this->getNome(),
+            'data' => $this->getData(),
+            'local' => $this->getLocal(),
+            'ididoso' => $this->getIdosoIdoso(),
+            'idusuario' => $this->getUsuarioIdusuario(),
+        ];
+    }
 }

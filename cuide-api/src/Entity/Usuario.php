@@ -42,5 +42,77 @@ class Usuario
      */
     private $categoria;
 
+    /**
+     * @return int
+     */
+    public function getIdusuario(): int
+    {
+        return $this->idusuario;
+    }
+
+    /**
+     * @param int $idusuario
+     */
+    public function setIdusuario(int $idusuario): void
+    {
+        $this->idusuario = $idusuario;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUsuario(): string
+    {
+        return $this->usuario;
+    }
+
+    /**
+     * @param string $usuario
+     */
+    public function setUsuario(string $usuario): void
+    {
+        $this->usuario = $usuario;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSenha(): string
+    {
+        return $this->senha;
+    }
+
+    /**
+     * @param string $senha
+     */
+    public function setSenha(string $senha): void
+    {
+        $this->senha = $senha;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCategoria(): string
+    {
+        return $this->categoria;
+    }
+
+    /**
+     * @param string $categoria
+     */
+    public function setCategoria(string $categoria): void
+    {
+        $this->categoria = $categoria;
+    }
+
+    public function toArray()
+    {
+        return [
+            'idusuario' => $this->getIdusuario(),
+            'usuario' => $this->getUsuario(),
+            'categoria' => $this->getCategoria()
+        ];
+    }
 
 }

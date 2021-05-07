@@ -74,18 +74,147 @@ class Cuidador
     private $usuarioIdusuario;
 
     /**
-     * @var \Doctrine\Common\Collections\Collection
-     *
-     * @ORM\ManyToMany(targetEntity="Idoso", mappedBy="cuidadorCuidador")
+     * @return int
      */
-    private $idosoIdoso;
+    public function getCuidadorId(): int
+    {
+        return $this->cuidadorId;
+    }
 
     /**
-     * Constructor
+     * @param int $cuidadorId
      */
-    public function __construct()
+    public function setCuidadorId(int $cuidadorId): void
     {
-        $this->idosoIdoso = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->cuidadorId = $cuidadorId;
     }
+
+    /**
+     * @return string
+     */
+    public function getNome(): string
+    {
+        return $this->nome;
+    }
+
+    /**
+     * @param string $nome
+     */
+    public function setNome(string $nome): void
+    {
+        $this->nome = $nome;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCpf(): string
+    {
+        return $this->cpf;
+    }
+
+    /**
+     * @param string $cpf
+     */
+    public function setCpf(string $cpf): void
+    {
+        $this->cpf = $cpf;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param string $email
+     */
+    public function setEmail(string $email): void
+    {
+        $this->email = $email;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDataNascimento(): string
+    {
+        return $this->dataNascimento;
+    }
+
+    /**
+     * @param string $dataNascimento
+     */
+    public function setDataNascimento(string $dataNascimento): void
+    {
+        $this->dataNascimento = $dataNascimento;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCertificacao(): string
+    {
+        return $this->certificacao;
+    }
+
+    /**
+     * @param string $certificacao
+     */
+    public function setCertificacao(string $certificacao): void
+    {
+        $this->certificacao = $certificacao;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFoto(): string
+    {
+        return $this->foto;
+    }
+
+    /**
+     * @param string $foto
+     */
+    public function setFoto(string $foto): void
+    {
+        $this->foto = $foto;
+    }
+
+    /**
+     * @return \Usuario
+     */
+    public function getUsuarioIdusuario(): \Usuario
+    {
+        return $this->usuarioIdusuario;
+    }
+
+    /**
+     * @param \Usuario $usuarioIdusuario
+     */
+    public function setUsuarioIdusuario(\Usuario $usuarioIdusuario): void
+    {
+        $this->usuarioIdusuario = $usuarioIdusuario;
+    }
+
+    public function toArray()
+    {
+        return [
+            'idcuidador' => $this->getCuidadorId(),
+            'nome' => $this->getNome(),
+            'cpf' => $this->getCpf(),
+            'email' => $this->getEmail(),
+            'data_nascimento' => $this->getDataNascimento(),
+            'certificacao' => $this->getCertificacao(),
+            'foto' => $this->getFoto(),
+            'idusuario' => $this->getUsuarioIdusuario(),
+
+        ];
+    }
+
 
 }
