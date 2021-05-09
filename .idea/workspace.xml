@@ -100,16 +100,19 @@
       <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/wrapper.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/wrapper.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../chat-socketio/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../chat-socketio/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/cuide.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cuide.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MODEL_CUIDE.png" beforeDir="false" afterPath="$PROJECT_DIR$/MODEL_CUIDE.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Consulta.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Consulta.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Cuidador.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Cuidador.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Exame.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Exame.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Idoso.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Idoso.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Medicamento.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Medicamento.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Sintoma.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Sintoma.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Usuario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuide-script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-script.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Controller/ConsultaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Controller/ConsultaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Controller/CuidadorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Controller/CuidadorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Controller/ExameController.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Controller/ExameController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Controller/IdosoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Controller/IdosoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Controller/MedicamentoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Controller/MedicamentoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Controller/SintomaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Controller/SintomaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,8 +126,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -205,6 +208,11 @@
       <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/property-access" />
       <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/property-info" />
       <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/serializer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1rwWpTSZAt7SANuKzSiyVSe5hvT" />
@@ -237,7 +245,7 @@
       <updated>1619887816211</updated>
       <workItem from="1619887818172" duration="801000" />
       <workItem from="1620059864035" duration="14117000" />
-      <workItem from="1620315947950" duration="11796000" />
+      <workItem from="1620315947950" duration="31354000" />
     </task>
     <servers />
   </component>
