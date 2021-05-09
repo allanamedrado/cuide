@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<title>Usuario</title>
+
+{% block body %}
+    <h1>Usuario</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Idusuario</th>
+                <td>{{ usuario.idusuario }}</td>
+            </tr>
+            <tr>
+                <th>Usuario</th>
+                <td>{{ usuario.usuario }}</td>
+            </tr>
+            <tr>
+                <th>Senha</th>
+                <td>{{ usuario.senha }}</td>
+            </tr>
+            <tr>
+                <th>Categoria</th>
+                <td>{{ usuario.categoria }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('usuario_index') }}">back to list</a>
+
+    <a href="{{ path('usuario_edit', {'idusuario': usuario.idusuario}) }}">edit</a>
+
+    {{ include('usuario/_delete_form.html.twig') }}
+{% endblock %}

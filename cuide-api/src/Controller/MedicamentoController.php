@@ -5,9 +5,11 @@ namespace App\Controller;
 use App\Entity\Medicamento;
 use App\Form\MedicamentoType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Validator\Constraints\Json;
 
 /**
  * @Route("/medicamento")
@@ -17,38 +19,42 @@ class MedicamentoController extends AbstractController
     /**
      * @Route("/", name="medicamento_index", methods={"GET"})
      */
-    public function index(): Response
+    public function index(): JsonResponse
     {
         $medicamentos = $this->getDoctrine()
             ->getRepository(Medicamento::class)
             ->findAll();
+        $arrayMedicamentos = [];
 
-        return $this->render('medicamento/index.html.twig', [
-            'medicamentos' => $medicamentos,
-        ]);
+        foreach ($medicamentos as $m){
+            array_push($arrayMedicamentos, $m->toArray());
+        }
+
+        return new JsonResponse($arrayMedicamentos, Response::HTTP_OK);
     }
 
     /**
-     * @Route("/new", name="medicamento_new", methods={"GET","POST"})
+     * @Route("/new", name="medicamento_new", methods={"POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request): JsonResponse
     {
+        $data = json_decode($request->query->get('medicamento'), true);
         $medicamento = new Medicamento();
-        $form = $this->createForm(MedicamentoType::class, $medicamento);
-        $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($medicamento);
-            $entityManager->flush();
+        $medicamento->setNome($data['nome']);
+        $medicamento->setUsuarioIdusuario($data['idusuario']);
+        $medicamento->setIdosoIdoso($data['ididoso']);
+        $medicamento->setDataInicio($data['data_inicio']);
+        $medicamento->setDataFim($data['data_fim']);
+        $medicamento->setDosagem($data['dosagem']);
+        $medicamento->setHorario($data['horario']);
+        $medicamento->setQuantidade($data['quantidade']);
 
-            return $this->redirectToRoute('medicamento_index');
-        }
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->persist($medicamento);
+        $entityManager->flush();
 
-        return $this->render('medicamento/new.html.twig', [
-            'medicamento' => $medicamento,
-            'form' => $form->createView(),
-        ]);
+        return new JsonResponse(['status' => 'Medicamento cadastrado!'], Response::HTTP_OK);
     }
 
     /**
@@ -56,9 +62,7 @@ class MedicamentoController extends AbstractController
      */
     public function show(Medicamento $medicamento): Response
     {
-        return $this->render('medicamento/show.html.twig', [
-            'medicamento' => $medicamento,
-        ]);
+        return new JsonResponse($medicamento->toArray(), Response::HTTP_OK);
     }
 
     /**
@@ -66,32 +70,34 @@ class MedicamentoController extends AbstractController
      */
     public function edit(Request $request, Medicamento $medicamento): Response
     {
-        $form = $this->createForm(MedicamentoType::class, $medicamento);
-        $form->handleRequest($request);
+        $data = json_decode($request->query->get('medicamento'), true);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
+        $medicamento->setNome($data['nome']);
+        $medicamento->setUsuarioIdusuario($data['idusuario']);
+        $medicamento->setIdosoIdoso($data['ididoso']);
+        $medicamento->setDataInicio($data['data_inicio']);
+        $medicamento->setDataFim($data['data_fim']);
+        $medicamento->setDosagem($data['dosagem']);
+        $medicamento->setHorario($data['horario']);
+        $medicamento->setQuantidade($data['quantidade']);
 
-            return $this->redirectToRoute('medicamento_index');
-        }
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->persist($medicamento);
+        $entityManager->flush();
 
-        return $this->render('medicamento/edit.html.twig', [
-            'medicamento' => $medicamento,
-            'form' => $form->createView(),
-        ]);
+        return new JsonResponse(['status' => 'Medicamento atualizado!'], Response::HTTP_OK);
     }
 
     /**
-     * @Route("/{medicamentoId}", name="medicamento_delete", methods={"POST"})
+     * @Route("/{medicamentoId}/{hash}", name="medicamento_delete", methods={"POST"})
      */
-    public function delete(Request $request, Medicamento $medicamento): Response
+    public function delete(Medicamento $medicamento, $hash): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$medicamento->getMedicamentoId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($medicamento);
-            $entityManager->flush();
+        if(sha1(md5($medicamento->getMedicamentoId().$medicamento->getNome())) === $hash){
+            $this->getDoctrine()->getManager()->remove($medicamento);
+            $this->getDoctrine()->getManager()->flush();
+            return new JsonResponse(['status' => 'Item excluido!'], Response::HTTP_OK);
         }
-
-        return $this->redirectToRoute('medicamento_index');
+        return new JsonResponse(['status' => 'Codigo inválido!'], Response::HTTP_UNAUTHORIZED);
     }
 }
