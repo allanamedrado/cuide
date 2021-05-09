@@ -5,9 +5,11 @@ namespace App\Controller;
 use App\Entity\Idoso;
 use App\Form\IdosoType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Validator\Constraints\Json;
 
 /**
  * @Route("/idoso")
@@ -17,38 +19,42 @@ class IdosoController extends AbstractController
     /**
      * @Route("/", name="idoso_index", methods={"GET"})
      */
-    public function index(): Response
+    public function index(): JsonResponse
     {
         $idosos = $this->getDoctrine()
             ->getRepository(Idoso::class)
             ->findAll();
 
-        return $this->render('idoso/index.html.twig', [
-            'idosos' => $idosos,
-        ]);
+        $arrayIdosos = [];
+        foreach ($idosos as $i){
+            array_push($arrayIdosos, $i->toArray());
+        }
+        return new JsonResponse($arrayIdosos, Response::HTTP_OK);
+
     }
 
     /**
-     * @Route("/new", name="idoso_new", methods={"GET","POST"})
+     * @Route("/new", name="idoso_new", methods={"POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request): JsonResponse
     {
+        $data = json_decode($request->query->get('idoso'), true);
         $idoso = new Idoso();
-        $form = $this->createForm(IdosoType::class, $idoso);
-        $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($idoso);
-            $entityManager->flush();
+        $idoso->setUsuarioIdusuario($data['idusuario']);
+        $idoso->setNome($data['nome']);
+        $idoso->setEmail($data['email']);
+        $idoso->setCpf($data['cpf']);
+        $idoso->setDataNascimento($data['data_nascimento']);
+        $idoso->setCuidadorCuidador($data['idcuidador']);
+        $idoso->setEndereco($data['endereco']);
 
-            return $this->redirectToRoute('idoso_index');
-        }
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->persist($idoso);
+        $entityManager->flush();
 
-        return $this->render('idoso/new.html.twig', [
-            'idoso' => $idoso,
-            'form' => $form->createView(),
-        ]);
+        return new JsonResponse(['status' => 'Idoso cadastrado!'], Response::HTTP_OK);
+
     }
 
     /**
@@ -56,42 +62,41 @@ class IdosoController extends AbstractController
      */
     public function show(Idoso $idoso): Response
     {
-        return $this->render('idoso/show.html.twig', [
-            'idoso' => $idoso,
-        ]);
+        return new JsonResponse($idoso->toArray(), Response::HTTP_OK);
     }
 
     /**
-     * @Route("/{idosoId}/edit", name="idoso_edit", methods={"GET","POST"})
+     * @Route("/{idosoId}/edit", name="idoso_edit", methods={"PUT"})
      */
     public function edit(Request $request, Idoso $idoso): Response
     {
-        $form = $this->createForm(IdosoType::class, $idoso);
-        $form->handleRequest($request);
+        $data = json_decode($request->query->get('idoso'), true);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
+        $idoso->setUsuarioIdusuario($data['idusuario']);
+        $idoso->setNome($data['nome']);
+        $idoso->setEmail($data['email']);
+        $idoso->setCpf($data['cpf']);
+        $idoso->setDataNascimento($data['data_nascimento']);
+        $idoso->setCuidadorCuidador($data['idcuidador']);
+        $idoso->setEndereco($data['endereco']);
 
-            return $this->redirectToRoute('idoso_index');
-        }
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->persist($idoso);
+        $entityManager->flush();
 
-        return $this->render('idoso/edit.html.twig', [
-            'idoso' => $idoso,
-            'form' => $form->createView(),
-        ]);
+        return new JsonResponse(['status' => 'Idoso atualizado!'], Response::HTTP_OK);
     }
 
     /**
-     * @Route("/{idosoId}", name="idoso_delete", methods={"POST"})
+     * @Route("/{idosoId}/{hash}", name="idoso_delete", methods={"POST"})
      */
-    public function delete(Request $request, Idoso $idoso): Response
+    public function delete(Idoso $idoso, $hash): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$idoso->getIdosoId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($idoso);
-            $entityManager->flush();
+        if(sha1(md5($idoso->getIdosoId().$idoso->getNome())) === $hash){
+            $this->getDoctrine()->getManager()->remove($idoso);
+            $this->getDoctrine()->getManager()->flush();
+            return new JsonResponse(['status' => 'Item excluido!'], Response::HTTP_OK);
         }
-
-        return $this->redirectToRoute('idoso_index');
+        return new JsonResponse(['status' => 'Codigo inválido!'], Response::HTTP_UNAUTHORIZED);
     }
 }

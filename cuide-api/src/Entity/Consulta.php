@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Consulta
  *
- * @ORM\Table(name="consulta")
+ * @ORM\Table(name="consulta", indexes={@ORM\Index(name="fk_consulta_usuario1_idx", columns={"usuario_idUsuario"}), @ORM\Index(name="fk_consulta_idoso1_idx", columns={"idoso_idoso_id"})})
  * @ORM\Entity
  */
 class Consulta
@@ -57,51 +57,47 @@ class Consulta
     private $local;
 
     /**
+     * @var \Idoso
+     *
+     * @ORM\ManyToOne(targetEntity="Idoso")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idoso_idoso_id", referencedColumnName="idoso_id")
+     * })
+     */
+    private $idosoIdoso;
+
+    /**
+     * @var \Usuario
+     *
+     * @ORM\ManyToOne(targetEntity="Usuario")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="usuario_idUsuario", referencedColumnName="idUsuario")
+     * })
+     */
+    private $usuarioIdusuario;
+
+    /**
      * @return int
      */
-    public function getConsultaId()
+    public function getConsultaId(): int
     {
         return $this->consultaId;
     }
 
     /**
+     * @param int $consultaId
+     */
+    public function setConsultaId(int $consultaId): void
+    {
+        $this->consultaId = $consultaId;
+    }
+
+    /**
      * @return string
      */
-    public function getMedico()
+    public function getMedico(): string
     {
         return $this->medico;
-    }
-
-    /**
-     * @return string
-     */
-    public function getEspecialidade()
-    {
-        return $this->especialidade;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getData()
-    {
-        return $this->data;
-    }
-
-    /**
-     * @return string
-     */
-    public function getHora()
-    {
-        return $this->hora;
-    }
-
-    /**
-     * @return string
-     */
-    public function getLocal()
-    {
-        return $this->local;
     }
 
     /**
@@ -113,11 +109,27 @@ class Consulta
     }
 
     /**
+     * @return string
+     */
+    public function getEspecialidade(): string
+    {
+        return $this->especialidade;
+    }
+
+    /**
      * @param string $especialidade
      */
     public function setEspecialidade(string $especialidade): void
     {
         $this->especialidade = $especialidade;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getData(): \DateTime
+    {
+        return $this->data;
     }
 
     /**
@@ -129,11 +141,27 @@ class Consulta
     }
 
     /**
+     * @return string
+     */
+    public function getHora(): string
+    {
+        return $this->hora;
+    }
+
+    /**
      * @param string $hora
      */
     public function setHora(string $hora): void
     {
         $this->hora = $hora;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLocal(): string
+    {
+        return $this->local;
     }
 
     /**
@@ -144,16 +172,51 @@ class Consulta
         $this->local = $local;
     }
 
+    /**
+     * @return \Idoso
+     */
+    public function getIdosoIdoso(): \Idoso
+    {
+        return $this->idosoIdoso;
+    }
+
+    /**
+     * @param \Idoso $idosoIdoso
+     */
+    public function setIdosoIdoso(\Idoso $idosoIdoso): void
+    {
+        $this->idosoIdoso = $idosoIdoso;
+    }
+
+    /**
+     * @return \Usuario
+     */
+    public function getUsuarioIdusuario(): \Usuario
+    {
+        return $this->usuarioIdusuario;
+    }
+
+    /**
+     * @param \Usuario $usuarioIdusuario
+     */
+    public function setUsuarioIdusuario(\Usuario $usuarioIdusuario): void
+    {
+        $this->usuarioIdusuario = $usuarioIdusuario;
+    }
 
     public function toArray()
     {
         return [
-            'id' => $this->getConsultaId(),
+            'idconsulta' => $this->getConsultaId(),
+            'medico' => $this->getMedico(),
             'especialidade' => $this->getEspecialidade(),
             'data' => $this->getData(),
             'hora' => $this->getHora(),
             'local' => $this->getLocal(),
-            'medico' => $this->getMedico(),
+            'ididoso' => $this->getIdosoIdoso(),
+            'idusuario' => $this->getUsuarioIdusuario()
         ];
+
     }
+
 }

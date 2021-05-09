@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Medicamento
  *
- * @ORM\Table(name="medicamento")
+ * @ORM\Table(name="medicamento", indexes={@ORM\Index(name="fk_medicamento_usuario1_idx", columns={"usuario_idUsuario"}), @ORM\Index(name="fk_medicamento_idoso1_idx", columns={"idoso_idoso_id"})})
  * @ORM\Entity
  */
 class Medicamento
@@ -64,9 +64,29 @@ class Medicamento
     private $horario;
 
     /**
+     * @var \Idoso
+     *
+     * @ORM\ManyToOne(targetEntity="Idoso")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idoso_idoso_id", referencedColumnName="idoso_id")
+     * })
+     */
+    private $idosoIdoso;
+
+    /**
+     * @var \Usuario
+     *
+     * @ORM\ManyToOne(targetEntity="Usuario")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="usuario_idUsuario", referencedColumnName="idUsuario")
+     * })
+     */
+    private $usuarioIdusuario;
+
+    /**
      * @return int
      */
-    public function getMedicamentoId()
+    public function getMedicamentoId(): int
     {
         return $this->medicamentoId;
     }
@@ -74,7 +94,7 @@ class Medicamento
     /**
      * @param int $medicamentoId
      */
-    public function setMedicamentoId(int $medicamentoId)
+    public function setMedicamentoId(int $medicamentoId): void
     {
         $this->medicamentoId = $medicamentoId;
     }
@@ -82,7 +102,7 @@ class Medicamento
     /**
      * @return string
      */
-    public function getNome()
+    public function getNome(): string
     {
         return $this->nome;
     }
@@ -90,7 +110,7 @@ class Medicamento
     /**
      * @param string $nome
      */
-    public function setNome(string $nome)
+    public function setNome(string $nome): void
     {
         $this->nome = $nome;
     }
@@ -98,7 +118,7 @@ class Medicamento
     /**
      * @return string
      */
-    public function getQuantidade()
+    public function getQuantidade(): string
     {
         return $this->quantidade;
     }
@@ -106,7 +126,7 @@ class Medicamento
     /**
      * @param string $quantidade
      */
-    public function setQuantidade(string $quantidade)
+    public function setQuantidade(string $quantidade): void
     {
         $this->quantidade = $quantidade;
     }
@@ -114,7 +134,7 @@ class Medicamento
     /**
      * @return string
      */
-    public function getDosagem()
+    public function getDosagem(): string
     {
         return $this->dosagem;
     }
@@ -122,7 +142,7 @@ class Medicamento
     /**
      * @param string $dosagem
      */
-    public function setDosagem(string $dosagem)
+    public function setDosagem(string $dosagem): void
     {
         $this->dosagem = $dosagem;
     }
@@ -130,7 +150,7 @@ class Medicamento
     /**
      * @return \DateTime
      */
-    public function getDataInicio()
+    public function getDataInicio(): \DateTime
     {
         return $this->dataInicio;
     }
@@ -138,7 +158,7 @@ class Medicamento
     /**
      * @param \DateTime $dataInicio
      */
-    public function setDataInicio(\DateTime $dataInicio)
+    public function setDataInicio(\DateTime $dataInicio): void
     {
         $this->dataInicio = $dataInicio;
     }
@@ -146,7 +166,7 @@ class Medicamento
     /**
      * @return \DateTime
      */
-    public function getDataFim()
+    public function getDataFim(): \DateTime
     {
         return $this->dataFim;
     }
@@ -154,7 +174,7 @@ class Medicamento
     /**
      * @param \DateTime $dataFim
      */
-    public function setDataFim(\DateTime $dataFim)
+    public function setDataFim(\DateTime $dataFim): void
     {
         $this->dataFim = $dataFim;
     }
@@ -162,7 +182,7 @@ class Medicamento
     /**
      * @return string
      */
-    public function getHorario()
+    public function getHorario(): string
     {
         return $this->horario;
     }
@@ -170,10 +190,56 @@ class Medicamento
     /**
      * @param string $horario
      */
-    public function setHorario(string $horario)
+    public function setHorario(string $horario): void
     {
         $this->horario = $horario;
     }
 
+    /**
+     * @return \Idoso
+     */
+    public function getIdosoIdoso(): \Idoso
+    {
+        return $this->idosoIdoso;
+    }
+
+    /**
+     * @param \Idoso $idosoIdoso
+     */
+    public function setIdosoIdoso(\Idoso $idosoIdoso): void
+    {
+        $this->idosoIdoso = $idosoIdoso;
+    }
+
+    /**
+     * @return \Usuario
+     */
+    public function getUsuarioIdusuario(): \Usuario
+    {
+        return $this->usuarioIdusuario;
+    }
+
+    /**
+     * @param \Usuario $usuarioIdusuario
+     */
+    public function setUsuarioIdusuario(\Usuario $usuarioIdusuario): void
+    {
+        $this->usuarioIdusuario = $usuarioIdusuario;
+    }
+
+    public function toArray()
+    {
+        return [
+            'idmedicamento' => $this->getMedicamentoId(),
+            'nome' => $this->getNome(),
+            'quantidade' => $this->getQuantidade(),
+            'dosagem' => $this->getDosagem(),
+            'data_inicio' => $this->getDataInicio(),
+            'data_fim' => $this->getDataFim(),
+            'horario' => $this->getHorario(),
+            'ididoso' => $this->getIdosoIdoso(),
+            'idusuario' => $this->getUsuarioIdusuario(),
+        ];
+    }
 
 }

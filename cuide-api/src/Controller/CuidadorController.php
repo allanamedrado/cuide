@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Cuidador;
 use App\Form\CuidadorType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -17,81 +18,91 @@ class CuidadorController extends AbstractController
     /**
      * @Route("/", name="cuidador_index", methods={"GET"})
      */
-    public function index(): Response
+    public function index(): JsonResponse
     {
-        $cuidadors = $this->getDoctrine()
+        $cuidadores = $this->getDoctrine()
             ->getRepository(Cuidador::class)
             ->findAll();
-
-        return $this->render('cuidador/index.html.twig', [
-            'cuidadors' => $cuidadors,
-        ]);
+        $arrayCuidadores = [];
+        foreach ($cuidadores as $c){
+            array_push($arrayCuidadores, $c->toArray());
+        }
+        return new JsonResponse($arrayCuidadores, Response::HTTP_OK);
     }
 
     /**
-     * @Route("/new", name="cuidador_new", methods={"GET","POST"})
+     * @Route("/new", name="cuidador_new", methods={"POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request): JsonResponse
     {
+        $data = json_decode($request->query->get('cuidador'), true);
+
         $cuidador = new Cuidador();
-        $form = $this->createForm(CuidadorType::class, $cuidador);
-        $form->handleRequest($request);
+        $cuidador->setDataNascimento($data['data_nascimento']);
+        $cuidador->setUsuarioIdusuario($data['idusuario']);
+        $cuidador->setCertificacao($data['certificacao']);
+        $cuidador->setCpf($data['cpf']);
+        $cuidador->setEmail($data['email']);
+        $cuidador->setFoto($data['foto']);
+        $cuidador->setNome($data['nome']);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($cuidador);
-            $entityManager->flush();
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->persist($cuidador);
+        $entityManager->flush();
 
-            return $this->redirectToRoute('cuidador_index');
-        }
-
-        return $this->render('cuidador/new.html.twig', [
-            'cuidador' => $cuidador,
-            'form' => $form->createView(),
-        ]);
+//        return $this->json([]);
+        return new JsonResponse(['status' => 'Cuidador cadastrado!'], Response::HTTP_CREATED);
     }
 
     /**
      * @Route("/{cuidadorId}", name="cuidador_show", methods={"GET"})
+     * @param Cuidador $cuidador
+     * @return JsonResponse
      */
-    public function show(Cuidador $cuidador): Response
+    public function show(Cuidador $cuidador): JsonResponse
     {
-        return $this->render('cuidador/show.html.twig', [
-            'cuidador' => $cuidador,
-        ]);
+        return new JsonResponse($cuidador->toArray(), Response::HTTP_OK);
     }
 
     /**
-     * @Route("/{cuidadorId}/edit", name="cuidador_edit", methods={"GET","POST"})
+     * @Route("/{cuidadorId}/edit", name="cuidador_edit", methods={"PUT"})
+     * @param Request $request
+     * @param Cuidador $cuidador
+     * @return Response
      */
     public function edit(Request $request, Cuidador $cuidador): Response
     {
-        $form = $this->createForm(CuidadorType::class, $cuidador);
-        $form->handleRequest($request);
+        $data = json_decode($request->query->get('cuidador'), true);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
+        $cuidador->setDataNascimento($data['data_nascimento']);
+        $cuidador->setUsuarioIdusuario($data['idusuario']);
+        $cuidador->setCertificacao($data['certificacao']);
+        $cuidador->setCpf($data['cpf']);
+        $cuidador->setEmail($data['email']);
+        $cuidador->setFoto($data['foto']);
+        $cuidador->setNome($data['nome']);
 
-            return $this->redirectToRoute('cuidador_index');
-        }
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->persist($cuidador);
+        $entityManager->flush();
 
-        return $this->render('cuidador/edit.html.twig', [
-            'cuidador' => $cuidador,
-            'form' => $form->createView(),
-        ]);
+//        return $this->json([]);
+        return new JsonResponse(['status' => 'Cuidador atualizado!'], Response::HTTP_CREATED);
     }
 
     /**
-     * @Route("/{cuidadorId}", name="cuidador_delete", methods={"POST"})
+     * @Route("/{cuidadorId}/{hash}", name="cuidador_delete", methods={"DELETE"})
+     * @param Cuidador $cuidador
+     * @param $hash
+     * @return JsonResponse
      */
-    public function delete(Request $request, Cuidador $cuidador): Response
+    public function delete(Cuidador $cuidador, $hash): JsonResponse
     {
-        if ($this->isCsrfTokenValid('delete'.$cuidador->getCuidadorId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($cuidador);
-            $entityManager->flush();
+        if(sha1(md5($cuidador->getCuidadorId().$cuidador->getNome())) === $hash){
+            $this->getDoctrine()->getManager()->remove($cuidador);
+            $this->getDoctrine()->getManager()->flush();
+            return new JsonResponse(['status' => 'Item excluido!'], Response::HTTP_OK);
         }
-
-        return $this->redirectToRoute('cuidador_index');
+        return new JsonResponse(['status' => 'Codigo inválido!'], Response::HTTP_UNAUTHORIZED);
     }
 }

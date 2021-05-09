@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Idoso
  *
- * @ORM\Table(name="idoso", indexes={@ORM\Index(name="fk_idoso_exame1_idx", columns={"exame_exame_id"}), @ORM\Index(name="fk_idoso_consulta1_idx", columns={"consulta_consulta_id"}), @ORM\Index(name="fk_idoso_sintoma1_idx", columns={"sintoma_sintoma_id"}), @ORM\Index(name="fk_idoso_medicamento1_idx", columns={"medicamento_medicamento_id"})})
+ * @ORM\Table(name="idoso", indexes={@ORM\Index(name="fk_idoso_cuidador1_idx", columns={"cuidador_cuidador_id"}), @ORM\Index(name="fk_idoso_Usuario1_idx", columns={"Usuario_idUsuario"})})
  * @ORM\Entity
  */
 class Idoso
@@ -57,72 +57,29 @@ class Idoso
     private $endereco;
 
     /**
-     * @var \Consulta
+     * @var \Usuario
      *
-     * @ORM\ManyToOne(targetEntity="Consulta")
+     * @ORM\ManyToOne(targetEntity="Usuario")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="consulta_consulta_id", referencedColumnName="consulta_id")
+     *   @ORM\JoinColumn(name="Usuario_idUsuario", referencedColumnName="idUsuario")
      * })
      */
-    private $consultaConsulta;
+    private $usuarioIdusuario;
 
     /**
-     * @var \Exame
+     * @var \Cuidador
      *
-     * @ORM\ManyToOne(targetEntity="Exame")
+     * @ORM\ManyToOne(targetEntity="Cuidador")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="exame_exame_id", referencedColumnName="exame_id")
+     *   @ORM\JoinColumn(name="cuidador_cuidador_id", referencedColumnName="cuidador_id")
      * })
-     */
-    private $exameExame;
-
-    /**
-     * @var \Medicamento
-     *
-     * @ORM\ManyToOne(targetEntity="Medicamento")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="medicamento_medicamento_id", referencedColumnName="medicamento_id")
-     * })
-     */
-    private $medicamentoMedicamento;
-
-    /**
-     * @var \Sintoma
-     *
-     * @ORM\ManyToOne(targetEntity="Sintoma")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="sintoma_sintoma_id", referencedColumnName="sintoma_id")
-     * })
-     */
-    private $sintomaSintoma;
-
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     *
-     * @ORM\ManyToMany(targetEntity="Cuidador", inversedBy="idosoIdoso")
-     * @ORM\JoinTable(name="idoso_has_cuidador",
-     *   joinColumns={
-     *     @ORM\JoinColumn(name="idoso_idoso_id", referencedColumnName="idoso_id")
-     *   },
-     *   inverseJoinColumns={
-     *     @ORM\JoinColumn(name="cuidador_cuidador_id", referencedColumnName="cuidador_id")
-     *   }
-     * )
      */
     private $cuidadorCuidador;
 
     /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->cuidadorCuidador = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
      * @return int
      */
-    public function getIdosoId()
+    public function getIdosoId(): int
     {
         return $this->idosoId;
     }
@@ -130,7 +87,7 @@ class Idoso
     /**
      * @param int $idosoId
      */
-    public function setIdosoId(int $idosoId)
+    public function setIdosoId(int $idosoId): void
     {
         $this->idosoId = $idosoId;
     }
@@ -138,7 +95,7 @@ class Idoso
     /**
      * @return string
      */
-    public function getNome()
+    public function getNome(): string
     {
         return $this->nome;
     }
@@ -146,7 +103,7 @@ class Idoso
     /**
      * @param string $nome
      */
-    public function setNome(string $nome)
+    public function setNome(string $nome): void
     {
         $this->nome = $nome;
     }
@@ -154,7 +111,7 @@ class Idoso
     /**
      * @return string
      */
-    public function getCpf()
+    public function getCpf(): string
     {
         return $this->cpf;
     }
@@ -162,7 +119,7 @@ class Idoso
     /**
      * @param string $cpf
      */
-    public function setCpf(string $cpf)
+    public function setCpf(string $cpf): void
     {
         $this->cpf = $cpf;
     }
@@ -170,7 +127,7 @@ class Idoso
     /**
      * @return string
      */
-    public function getEmail()
+    public function getEmail(): string
     {
         return $this->email;
     }
@@ -178,7 +135,7 @@ class Idoso
     /**
      * @param string $email
      */
-    public function setEmail(string $email)
+    public function setEmail(string $email): void
     {
         $this->email = $email;
     }
@@ -186,7 +143,7 @@ class Idoso
     /**
      * @return \DateTime
      */
-    public function getDataNascimento()
+    public function getDataNascimento(): \DateTime
     {
         return $this->dataNascimento;
     }
@@ -194,7 +151,7 @@ class Idoso
     /**
      * @param \DateTime $dataNascimento
      */
-    public function setDataNascimento(\DateTime $dataNascimento)
+    public function setDataNascimento(\DateTime $dataNascimento): void
     {
         $this->dataNascimento = $dataNascimento;
     }
@@ -202,7 +159,7 @@ class Idoso
     /**
      * @return string
      */
-    public function getEndereco()
+    public function getEndereco(): string
     {
         return $this->endereco;
     }
@@ -210,91 +167,54 @@ class Idoso
     /**
      * @param string $endereco
      */
-    public function setEndereco(string $endereco)
+    public function setEndereco(string $endereco): void
     {
         $this->endereco = $endereco;
     }
 
     /**
-     * @return \Consulta
+     * @return \Usuario
      */
-    public function getConsultaConsulta()
+    public function getUsuarioIdusuario(): \Usuario
     {
-        return $this->consultaConsulta;
+        return $this->usuarioIdusuario;
     }
 
     /**
-     * @param \Consulta $consultaConsulta
+     * @param \Usuario $usuarioIdusuario
      */
-    public function setConsultaConsulta(\Consulta $consultaConsulta)
+    public function setUsuarioIdusuario(\Usuario $usuarioIdusuario): void
     {
-        $this->consultaConsulta = $consultaConsulta;
+        $this->usuarioIdusuario = $usuarioIdusuario;
     }
 
     /**
-     * @return \Exame
+     * @return \Cuidador
      */
-    public function getExameExame()
-    {
-        return $this->exameExame;
-    }
-
-    /**
-     * @param \Exame $exameExame
-     */
-    public function setExameExame(\Exame $exameExame)
-    {
-        $this->exameExame = $exameExame;
-    }
-
-    /**
-     * @return \Medicamento
-     */
-    public function getMedicamentoMedicamento()
-    {
-        return $this->medicamentoMedicamento;
-    }
-
-    /**
-     * @param \Medicamento $medicamentoMedicamento
-     */
-    public function setMedicamentoMedicamento(\Medicamento $medicamentoMedicamento)
-    {
-        $this->medicamentoMedicamento = $medicamentoMedicamento;
-    }
-
-    /**
-     * @return \Sintoma
-     */
-    public function getSintomaSintoma()
-    {
-        return $this->sintomaSintoma;
-    }
-
-    /**
-     * @param \Sintoma $sintomaSintoma
-     */
-    public function setSintomaSintoma(\Sintoma $sintomaSintoma)
-    {
-        $this->sintomaSintoma = $sintomaSintoma;
-    }
-
-    /**
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getCuidadorCuidador()
+    public function getCuidadorCuidador(): \Cuidador
     {
         return $this->cuidadorCuidador;
     }
 
     /**
-     * @param \Doctrine\Common\Collections\Collection $cuidadorCuidador
+     * @param \Cuidador $cuidadorCuidador
      */
-    public function setCuidadorCuidador($cuidadorCuidador): void
+    public function setCuidadorCuidador(\Cuidador $cuidadorCuidador): void
     {
         $this->cuidadorCuidador = $cuidadorCuidador;
     }
 
-
-
+    public function toArray()
+    {
+        return [
+            'ididoso' => $this->getIdosoId(),
+            'nome' => $this->getNome(),
+            'cpf' => $this->getCpf(),
+            'email' => $this->getEmail(),
+            'data_nascimento' => $this->getDataNascimento(),
+            'endereco' => $this->getEndereco(),
+            'idusuario' => $this->getUsuarioIdusuario(),
+            'idcuidador' => $this->getCuidadorCuidador(),
+        ];
+    }
 }

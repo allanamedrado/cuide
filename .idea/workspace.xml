@@ -2,25 +2,831 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a85fb80-c076-4031-b245-59b6e67bea65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-api/src/Controller/UsuarioController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Usuario.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-api/src/Form/UsuarioType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-api/templates/usuario/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-api/templates/usuario/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-api/templates/usuario/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-api/templates/usuario/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-api/templates/usuario/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/.bin/ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/.bin/ejs.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/.bin/jake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/.bin/jake.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/.yarn-integrity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/component-emitter/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/component-emitter/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/component-emitter/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/component-emitter/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/cookie/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/cookie/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/cookie/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/cookie/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/cors/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/cors/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/cors/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/cors/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/assert.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/assert/strict.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/async_hooks.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/base.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/buffer.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/child_process.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/cluster.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/console.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/constants.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/crypto.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/dgram.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/dns.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/dns/promises.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/domain.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/events.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/fs.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/fs/promises.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/globals.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/globals.global.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/http.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/http2.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/https.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/inspector.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/module.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/net.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/os.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/path.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/perf_hooks.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/process.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/punycode.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/querystring.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/readline.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/repl.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/stream.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/stream/promises.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/string_decoder.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/timers.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/timers/promises.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/tls.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/trace_events.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/ts3.6/assert.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/ts3.6/base.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/ts3.6/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/tty.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/url.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/util.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/v8.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/vm.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/wasi.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/worker_threads.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/@types/node/zlib.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-align/node_modules/ansi-regex/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-align/node_modules/emoji-regex/es2015/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-align/node_modules/emoji-regex/es2015/text.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-align/node_modules/emoji-regex/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-align/node_modules/emoji-regex/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-align/node_modules/emoji-regex/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-align/node_modules/emoji-regex/text.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-align/node_modules/is-fullwidth-code-point/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-align/node_modules/is-fullwidth-code-point/license" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-align/node_modules/is-fullwidth-code-point/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-align/node_modules/strip-ansi/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-align/node_modules/strip-ansi/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/async/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/async/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/async/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/async/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/async/component.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/async/lib/async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/async/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/async/support/sync-package-managers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/base64-arraybuffer/.npmignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/base64-arraybuffer/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/base64-arraybuffer/LICENSE-MIT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/base64-arraybuffer/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/base64-arraybuffer/lib/base64-arraybuffer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/base64-arraybuffer/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/base64id/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/base64id/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/base64id/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/base64id/lib/base64id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/base64id/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/component-emitter/History.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/component-emitter/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/component-emitter/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/component-emitter/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/component-emitter/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/cors/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/cors/HISTORY.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/cors/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/cors/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/cors/lib/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/cors/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ejs/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ejs/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ejs/bin/cli.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ejs/ejs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ejs/ejs.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ejs/jakefile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ejs/lib/ejs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ejs/lib/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ejs/node_modules/.bin/jake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ejs/node_modules/.bin/jake.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ejs/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ejs/usage.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io-parser/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io-parser/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io-parser/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io-parser/lib/commons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io-parser/lib/decodePacket.browser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io-parser/lib/decodePacket.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io-parser/lib/encodePacket.browser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io-parser/lib/encodePacket.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io-parser/lib/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io-parser/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/lib/engine.io.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/lib/parser-v3/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/lib/parser-v3/utf8.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/lib/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/lib/socket.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/lib/transport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/lib/transports/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/lib/transports/polling-jsonp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/lib/transports/polling.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/lib/transports/websocket.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/node_modules/cookie/HISTORY.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/node_modules/cookie/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/node_modules/cookie/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/node_modules/cookie/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/node_modules/cookie/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/node_modules/debug/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/node_modules/debug/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/node_modules/debug/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/node_modules/debug/src/browser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/node_modules/debug/src/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/node_modules/debug/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/node_modules/debug/src/node.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/node_modules/ms/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/node_modules/ms/license.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/node_modules/ms/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/node_modules/ms/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/engine.io/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/escape-string-regexp/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/escape-string-regexp/license" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/escape-string-regexp/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/escape-string-regexp/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/filelist/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/filelist/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/filelist/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/filelist/jakefile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/filelist/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/http-errors/node_modules/inherits/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/http-errors/node_modules/inherits/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/http-errors/node_modules/inherits/inherits.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/http-errors/node_modules/inherits/inherits_browser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/http-errors/node_modules/inherits/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/bin/bash_completion.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/bin/cli.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/jakefile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/lib/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/lib/jake.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/lib/loader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/lib/namespace.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/lib/package_task.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/lib/parseargs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/lib/program.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/lib/publish_task.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/lib/rule.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/lib/task/directory_task.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/lib/task/file_task.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/lib/task/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/lib/task/task.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/lib/test_task.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/lib/utils/file.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/lib/utils/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/lib/utils/logger.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/node_modules/ansi-styles/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/node_modules/ansi-styles/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/node_modules/ansi-styles/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/node_modules/chalk/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/node_modules/chalk/index.js.flow" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/node_modules/chalk/license" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/node_modules/chalk/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/node_modules/chalk/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/node_modules/chalk/templates.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/node_modules/chalk/types/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/node_modules/color-convert/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/node_modules/color-convert/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/node_modules/color-convert/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/node_modules/color-convert/conversions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/node_modules/color-convert/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/node_modules/color-convert/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/node_modules/color-convert/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/node_modules/color-name/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/node_modules/color-name/.npmignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/node_modules/color-name/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/node_modules/color-name/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/node_modules/color-name/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/node_modules/color-name/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/node_modules/color-name/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/test/integration/concurrent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/test/integration/file.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/test/integration/file_task.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/test/integration/helpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/test/integration/jakefile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/test/integration/jakelib/concurrent.jake.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/test/integration/jakelib/publish.jake.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/test/integration/jakelib/required_module.jake.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/test/integration/jakelib/rule.jake.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/test/integration/publish_task.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/test/integration/rule.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/test/integration/selfdep.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/test/integration/task_base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/test/unit/jakefile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/test/unit/namespace.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/test/unit/parseargs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/usage.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/nodemon/node_modules/.bin/nodetouch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/nodemon/node_modules/.bin/nodetouch.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/nodemon/node_modules/.bin/semver" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/nodemon/node_modules/.bin/semver.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/nodemon/node_modules/semver/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/object-assign/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/object-assign/license" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/object-assign/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/object-assign/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/rc/node_modules/ini/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/rc/node_modules/ini/ini.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/rc/node_modules/ini/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/registry-auth-token/node_modules/.bin/rc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/registry-auth-token/node_modules/.bin/rc.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/registry-url/node_modules/.bin/rc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/registry-url/node_modules/.bin/rc.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/send/node_modules/.bin/mime" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/send/node_modules/.bin/mime.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/send/node_modules/http-errors/HISTORY.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/send/node_modules/http-errors/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/send/node_modules/http-errors/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/send/node_modules/http-errors/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/send/node_modules/http-errors/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-adapter/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-adapter/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-adapter/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-adapter/dist/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-adapter/dist/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-adapter/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-parser/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-parser/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-parser/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-parser/dist/binary.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-parser/dist/binary.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-parser/dist/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-parser/dist/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-parser/dist/is-binary.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-parser/dist/is-binary.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-parser/node_modules/debug/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-parser/node_modules/debug/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-parser/node_modules/debug/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-parser/node_modules/debug/src/browser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-parser/node_modules/debug/src/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-parser/node_modules/debug/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-parser/node_modules/debug/src/node.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-parser/node_modules/ms/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-parser/node_modules/ms/license.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-parser/node_modules/ms/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-parser/node_modules/ms/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io-parser/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/client-dist/socket.io.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/client-dist/socket.io.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/client-dist/socket.io.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/client-dist/socket.io.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/client-dist/socket.io.msgpack.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/client-dist/socket.io.msgpack.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/dist/broadcast-operator.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/dist/broadcast-operator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/dist/client.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/dist/client.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/dist/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/dist/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/dist/namespace.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/dist/namespace.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/dist/parent-namespace.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/dist/parent-namespace.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/dist/socket.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/dist/socket.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/dist/typed-events.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/dist/typed-events.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/node_modules/debug/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/node_modules/debug/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/node_modules/debug/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/node_modules/debug/src/browser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/node_modules/debug/src/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/node_modules/debug/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/node_modules/debug/src/node.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/node_modules/ms/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/node_modules/ms/license.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/node_modules/ms/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/node_modules/ms/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/socket.io/wrapper.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/touch/node_modules/.bin/nopt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/touch/node_modules/.bin/nopt.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/update-notifier/node_modules/.bin/is-ci" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/update-notifier/node_modules/.bin/is-ci.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ws/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ws/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ws/browser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ws/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ws/lib/buffer-util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ws/lib/constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ws/lib/event-target.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ws/lib/extension.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ws/lib/limiter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ws/lib/permessage-deflate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ws/lib/receiver.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ws/lib/sender.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ws/lib/stream.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ws/lib/validation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ws/lib/websocket-server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ws/lib/websocket.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/node_modules/ws/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/src/app/controllers/consulta.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/src/views/chat.njk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide-front/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cuide.mwb.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/assert.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/assert.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/assert/strict.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/assert/strict.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/async_hooks.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/async_hooks.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/base.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/base.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/buffer.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/buffer.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/child_process.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/child_process.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/cluster.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/cluster.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/console.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/console.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/constants.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/constants.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/crypto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/crypto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/dgram.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/dgram.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/dns.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/dns.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/dns/promises.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/dns/promises.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/domain.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/domain.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/events.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/events.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/fs.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/fs.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/fs/promises.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/fs/promises.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/globals.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/globals.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/globals.global.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/globals.global.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/http.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/http.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/http2.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/http2.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/https.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/https.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/inspector.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/inspector.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/net.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/net.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/os.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/os.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/path.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/path.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/perf_hooks.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/perf_hooks.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/process.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/process.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/punycode.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/punycode.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/querystring.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/querystring.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/readline.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/readline.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/repl.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/repl.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/stream.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/stream.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/stream/promises.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/stream/promises.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/string_decoder.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/string_decoder.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/timers.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/timers.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/timers/promises.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/timers/promises.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/tls.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/tls.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/trace_events.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/trace_events.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/ts3.6/assert.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/ts3.6/assert.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/ts3.6/base.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/ts3.6/base.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/ts3.6/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/ts3.6/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/tty.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/tty.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/url.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/url.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/util.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/util.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/v8.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/v8.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/vm.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/vm.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/wasi.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/wasi.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/worker_threads.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/worker_threads.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/zlib.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/@types/node/zlib.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/express/History.md" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/express/History.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/express/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/express/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/express/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/express/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/express/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/express/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/express/lib/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/express/lib/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/express/lib/express.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/express/lib/express.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/express/lib/middleware/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/express/lib/middleware/init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/express/lib/middleware/query.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/express/lib/middleware/query.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/express/lib/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/express/lib/request.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/express/lib/response.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/express/lib/response.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/express/lib/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/express/lib/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/express/lib/router/layer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/express/lib/router/layer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/express/lib/router/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/express/lib/router/route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/express/lib/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/express/lib/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/express/lib/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/express/lib/view.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/express/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/express/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/client-dist/socket.io.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/client-dist/socket.io.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/client-dist/socket.io.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/client-dist/socket.io.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/client-dist/socket.io.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/client-dist/socket.io.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/client-dist/socket.io.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/client-dist/socket.io.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/client-dist/socket.io.msgpack.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/client-dist/socket.io.msgpack.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/client-dist/socket.io.msgpack.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/client-dist/socket.io.msgpack.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/broadcast-operator.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/broadcast-operator.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/broadcast-operator.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/broadcast-operator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/client.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/client.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/namespace.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/namespace.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/namespace.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/namespace.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/parent-namespace.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/parent-namespace.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/parent-namespace.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/parent-namespace.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/socket.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/socket.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/socket.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/socket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/typed-events.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/typed-events.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/typed-events.js" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/dist/typed-events.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/wrapper.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/node_modules/socket.io/wrapper.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat-socketio/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/cuide.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cuide.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MODEL_CUIDE.png" beforeDir="false" afterPath="$PROJECT_DIR$/MODEL_CUIDE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Controller/ConsultaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Controller/ConsultaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Controller/CuidadorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Controller/CuidadorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Controller/ExameController.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Controller/ExameController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Controller/IdosoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Controller/IdosoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Controller/MedicamentoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Controller/MedicamentoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Controller/SintomaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Controller/SintomaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Consulta.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Consulta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Cuidador.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Cuidador.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Exame.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Exame.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Idoso.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Idoso.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Medicamento.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Medicamento.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Sintoma.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Sintoma.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/base.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/consulta/_delete_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/consulta/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/templates/usuario/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/consulta/edit.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/consulta/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/consulta/new.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/consulta/show.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/cuidador/_delete_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/cuidador/_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/cuidador/edit.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/cuidador/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/cuidador/new.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/cuidador/show.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/exame/_delete_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/exame/_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/exame/edit.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/exame/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/exame/new.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/exame/show.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/idoso/_delete_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/idoso/_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/idoso/edit.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/idoso/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/idoso/new.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/idoso/show.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/medicamento/_delete_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/medicamento/_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/medicamento/edit.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/medicamento/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/medicamento/new.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/medicamento/show.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/sintoma/_delete_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/sintoma/_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/sintoma/edit.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/sintoma/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/sintoma/new.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/templates/sintoma/show.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/.bin/is-ci" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/.bin/is-ci" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/.bin/is-ci.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/.bin/is-ci.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/.bin/is-ci.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/.bin/mime" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/.bin/mime" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/.bin/mime.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/.bin/mime.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/.bin/mime.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/.bin/nodemon" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/.bin/nodemon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/.bin/nodemon.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/.bin/nodemon.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/.bin/nodemon.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/.bin/nodetouch" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/.bin/nodetouch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/.bin/nodetouch.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/.bin/nodetouch.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/.bin/nodetouch.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/.bin/nopt" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/.bin/nopt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/.bin/nopt.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/.bin/nopt.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/.bin/nopt.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/.bin/nunjucks-precompile" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/.bin/nunjucks-precompile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/.bin/nunjucks-precompile.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/.bin/nunjucks-precompile.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/.bin/nunjucks-precompile.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/.bin/rc" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/.bin/rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/.bin/rc.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/.bin/rc.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/.bin/rc.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/.bin/semver.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/.bin/semver.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/@sindresorhus/is/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/@sindresorhus/is/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/@szmarczak/http-timer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/@szmarczak/http-timer/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/a-sync-waterfall/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/a-sync-waterfall/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/abbrev/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/abbrev/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/accepts/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/accepts/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/ansi-align/node_modules/string-width/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-align/node_modules/string-width/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/ansi-align/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-align/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/ansi-regex/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-regex/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/ansi-regex/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-regex/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/ansi-regex/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-regex/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/ansi-styles/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-styles/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/anymatch/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/anymatch/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/array-flatten/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/array-flatten/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/asap/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/asap/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/balanced-match/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/balanced-match/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/binary-extensions/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/binary-extensions/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/body-parser/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/body-parser/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/boxen/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/boxen/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/brace-expansion/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/brace-expansion/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/braces/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/braces/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/buffer-writer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/buffer-writer/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/bytes/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/bytes/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/cacheable-request/node_modules/get-stream/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/cacheable-request/node_modules/get-stream/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/cacheable-request/node_modules/lowercase-keys/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/cacheable-request/node_modules/lowercase-keys/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/cacheable-request/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/cacheable-request/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/camelcase/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/camelcase/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/chalk/node_modules/has-flag/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/chalk/node_modules/has-flag/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/chalk/node_modules/supports-color/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/chalk/node_modules/supports-color/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/chalk/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/chalk/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/chokidar/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/chokidar/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/ci-info/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/ci-info/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/cli-boxes/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/cli-boxes/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/clone-response/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/clone-response/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/color-convert/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/color-convert/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/color-name/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/color-name/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/commander/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/commander/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/concat-map/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/concat-map/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/configstore/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/configstore/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/content-disposition/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/content-disposition/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/content-type/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/content-type/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/cookie-signature/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/cookie-signature/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/cookie/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/cookie/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/crypto-random-string/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/crypto-random-string/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/debug/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/debug/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/decompress-response/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/decompress-response/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/deep-extend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/deep-extend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/defer-to-connect/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/defer-to-connect/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/depd/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/depd/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/destroy/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/destroy/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/dot-prop/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/dot-prop/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/duplexer3/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/duplexer3/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/ee-first/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/ee-first/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/emoji-regex/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/emoji-regex/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/emoji-regex/es2015/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/emoji-regex/es2015/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/emoji-regex/es2015/text.js" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/emoji-regex/es2015/text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/emoji-regex/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/emoji-regex/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/emoji-regex/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/emoji-regex/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/emoji-regex/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/emoji-regex/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/emoji-regex/text.js" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/emoji-regex/text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/encodeurl/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/encodeurl/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/end-of-stream/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/end-of-stream/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/escape-goat/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/escape-goat/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/escape-html/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/escape-html/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/etag/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/etag/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/express/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/express/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/fill-range/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/fill-range/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/finalhandler/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/finalhandler/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/forwarded/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/forwarded/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/fresh/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/fresh/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/get-stream/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/get-stream/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/glob-parent/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/glob-parent/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/global-dirs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/global-dirs/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/got/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/got/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/graceful-fs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/graceful-fs/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/has-flag/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/has-flag/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/has-yarn/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/has-yarn/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/http-cache-semantics/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/http-cache-semantics/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/http-errors/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/http-errors/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/iconv-lite/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/iconv-lite/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/ignore-by-default/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/ignore-by-default/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/import-lazy/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/import-lazy/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/imurmurhash/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/imurmurhash/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/inherits/inherits.js" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/inherits/inherits.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/inherits/inherits_browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/inherits/inherits_browser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/inherits/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/inherits/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/ini/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/ini/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/ipaddr.js/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/ipaddr.js/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/is-binary-path/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/is-binary-path/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/is-ci/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/is-ci/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/is-extglob/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/is-extglob/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/is-fullwidth-code-point/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/is-fullwidth-code-point/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/is-fullwidth-code-point/license" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/is-fullwidth-code-point/license" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/is-fullwidth-code-point/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/is-fullwidth-code-point/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/is-fullwidth-code-point/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/is-fullwidth-code-point/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/is-glob/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/is-glob/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/is-installed-globally/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/is-installed-globally/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/is-npm/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/is-npm/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/is-number/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/is-number/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/is-obj/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/is-obj/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/is-path-inside/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/is-path-inside/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/is-typedarray/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/is-typedarray/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/is-yarn-global/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/is-yarn-global/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/json-buffer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/json-buffer/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/keyv/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/keyv/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/latest-version/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/latest-version/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/lowercase-keys/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/lowercase-keys/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/make-dir/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/make-dir/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/make-dir/node_modules/.bin/semver.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/make-dir/node_modules/.bin/semver.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/make-dir/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/make-dir/node_modules/semver/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/make-dir/node_modules/semver/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/nodemon/node_modules/semver/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/make-dir/node_modules/semver/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/nodemon/node_modules/semver/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/make-dir/node_modules/semver/bin/semver.js" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/semver/bin/semver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/make-dir/node_modules/semver/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/make-dir/node_modules/semver/range.bnf" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/nodemon/node_modules/semver/range.bnf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/make-dir/node_modules/semver/semver.js" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/nodemon/node_modules/semver/semver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/make-dir/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/make-dir/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/media-typer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/media-typer/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/merge-descriptors/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/merge-descriptors/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/method-override/node_modules/debug/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/method-override/node_modules/debug/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/method-override/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/method-override/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/methods/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/methods/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/mime-db/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/mime-db/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/mime-types/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/mime-types/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/mime/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/mime/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/mimic-response/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/mimic-response/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/minimatch/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/minimatch/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/minimist/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/minimist/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/ms/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/ms/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/negotiator/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/negotiator/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/nodemon/node_modules/debug/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/nodemon/node_modules/debug/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/nodemon/node_modules/ms/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/nodemon/node_modules/ms/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/nodemon/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/nodemon/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/nopt/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/nopt/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/nopt/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/nopt/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/normalize-path/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/normalize-path/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/normalize-url/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/normalize-url/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/nunjucks/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/nunjucks/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/on-finished/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/on-finished/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/once/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/once/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/p-cancelable/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/p-cancelable/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/package-json/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/package-json/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/package-json/node_modules/.bin/semver.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/package-json/node_modules/.bin/semver.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/package-json/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/package-json/node_modules/semver/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/package-json/node_modules/semver/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/rc/node_modules/ini/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/package-json/node_modules/semver/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/package-json/node_modules/semver/bin/semver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/package-json/node_modules/semver/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/package-json/node_modules/semver/range.bnf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/package-json/node_modules/semver/semver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/package-json/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/package-json/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/packet-reader/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/packet-reader/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/parseurl/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/parseurl/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/path-to-regexp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/path-to-regexp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/pg-connection-string/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/pg-connection-string/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/pg-int8/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/pg-int8/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/pg-pool/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/pg-pool/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/pg-protocol/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/pg-protocol/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/pg-types/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/pg-types/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/pg/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/pg/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/pgpass/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/pgpass/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/picomatch/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/picomatch/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/postgres-array/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/postgres-array/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/postgres-bytea/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/postgres-bytea/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/postgres-date/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/postgres-date/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/postgres-interval/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/postgres-interval/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/prepend-http/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/prepend-http/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/proxy-addr/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/proxy-addr/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/pstree.remy/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/pstree.remy/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/pump/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/pump/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/pupa/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/pupa/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/qs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/qs/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/range-parser/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/range-parser/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/raw-body/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/raw-body/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/rc/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/rc/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/readable-stream/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/readable-stream/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/readdirp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/readdirp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/registry-auth-token/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/registry-auth-token/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/registry-url/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/registry-url/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/responselike/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/responselike/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/safe-buffer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/safe-buffer/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/safer-buffer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/safer-buffer/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/semver-diff/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/semver-diff/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/semver-diff/node_modules/.bin/semver.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/semver-diff/node_modules/.bin/semver.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/semver-diff/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/semver-diff/node_modules/semver/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/nodemon/node_modules/semver/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/semver-diff/node_modules/semver/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/semver-diff/node_modules/semver/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/semver-diff/node_modules/semver/bin/semver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/semver-diff/node_modules/semver/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/semver-diff/node_modules/semver/range.bnf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/semver-diff/node_modules/semver/semver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/semver-diff/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/semver-diff/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/semver/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/semver/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/semver/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/semver/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/semver/bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/nodemon/node_modules/semver/bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/semver/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/semver/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/semver/semver.js" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/semver/semver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/send/node_modules/ms/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/send/node_modules/ms/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/send/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/send/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/serve-static/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/serve-static/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/setprototypeof/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/setprototypeof/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/signal-exit/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/signal-exit/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/split2/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/split2/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/statuses/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/statuses/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string-width/node_modules/ansi-regex/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-regex/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string-width/node_modules/ansi-regex/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-align/node_modules/ansi-regex/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string-width/node_modules/ansi-regex/license" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-align/node_modules/ansi-regex/license" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string-width/node_modules/ansi-regex/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string-width/node_modules/ansi-regex/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-align/node_modules/ansi-regex/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string-width/node_modules/emoji-regex/LICENSE-MIT.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-align/node_modules/emoji-regex/LICENSE-MIT.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string-width/node_modules/emoji-regex/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-align/node_modules/emoji-regex/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string-width/node_modules/emoji-regex/es2015/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string-width/node_modules/emoji-regex/es2015/text.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string-width/node_modules/emoji-regex/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string-width/node_modules/emoji-regex/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string-width/node_modules/emoji-regex/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string-width/node_modules/emoji-regex/text.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string-width/node_modules/is-fullwidth-code-point/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/is-fullwidth-code-point/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string-width/node_modules/is-fullwidth-code-point/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string-width/node_modules/is-fullwidth-code-point/license" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-align/node_modules/strip-ansi/license" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string-width/node_modules/is-fullwidth-code-point/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string-width/node_modules/is-fullwidth-code-point/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-align/node_modules/is-fullwidth-code-point/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string-width/node_modules/strip-ansi/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-align/node_modules/strip-ansi/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string-width/node_modules/strip-ansi/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string-width/node_modules/strip-ansi/license" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/jake/node_modules/ansi-styles/license" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string-width/node_modules/strip-ansi/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string-width/node_modules/strip-ansi/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/ansi-align/node_modules/strip-ansi/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string-width/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/string-width/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string_decoder/node_modules/safe-buffer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/string_decoder/node_modules/safe-buffer/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/string_decoder/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/string_decoder/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/strip-ansi/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/strip-ansi/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/strip-ansi/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/strip-ansi/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/strip-ansi/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/strip-ansi/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/strip-ansi/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/strip-ansi/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/strip-json-comments/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/strip-json-comments/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/supports-color/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/supports-color/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/term-size/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/term-size/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/to-readable-stream/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/to-readable-stream/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/to-regex-range/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/to-regex-range/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/toidentifier/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/toidentifier/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/touch/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/touch/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/type-fest/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/type-fest/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/type-is/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/type-is/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/typedarray-to-buffer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/typedarray-to-buffer/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/undefsafe/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/undefsafe/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/unique-string/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/unique-string/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/unpipe/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/unpipe/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/update-notifier/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/update-notifier/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/url-parse-lax/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/url-parse-lax/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/util-deprecate/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/util-deprecate/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/utils-merge/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/utils-merge/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/vary/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/vary/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/widest-line/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/widest-line/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/wrappy/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/wrappy/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/write-file-atomic/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/write-file-atomic/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/xdg-basedir/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/xdg-basedir/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/node_modules/xtend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/node_modules/xtend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cuide-front/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuide-front/src/app/controllers/cuidador.js" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/app/controllers/cuidador.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuide-front/src/views/cuidador.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/cuidador.njk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/create.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/create.njk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/edit.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/edit.njk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/index.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/index.njk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/show.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/show.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cuide-front/src/views/home.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/home.njk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/cuidador.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/cuidador.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-script.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/cuide.mwb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/cuide-api/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -99,9 +905,15 @@
       <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/property-access" />
       <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/property-info" />
       <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/serializer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1rwWpTSZAt7SANuKzSiyVSe5hvT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -110,7 +922,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../my-chat" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -128,11 +941,24 @@
       <option name="presentableId" value="Default" />
       <updated>1619887816211</updated>
       <workItem from="1619887818172" duration="801000" />
-      <workItem from="1620059864035" duration="12127000" />
+      <workItem from="1620059864035" duration="14117000" />
+      <workItem from="1620315947950" duration="31790000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

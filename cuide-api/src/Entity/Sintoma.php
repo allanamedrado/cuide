@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Sintoma
  *
- * @ORM\Table(name="sintoma")
+ * @ORM\Table(name="sintoma", indexes={@ORM\Index(name="fk_sintoma_usuario1_idx", columns={"usuario_idUsuario"}), @ORM\Index(name="fk_sintoma_idoso1_idx", columns={"idoso_idoso_id"})})
  * @ORM\Entity
  */
 class Sintoma
@@ -50,6 +50,26 @@ class Sintoma
     private $observacoes;
 
     /**
+     * @var \Idoso
+     *
+     * @ORM\ManyToOne(targetEntity="Idoso")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idoso_idoso_id", referencedColumnName="idoso_id")
+     * })
+     */
+    private $idosoIdoso;
+
+    /**
+     * @var \Usuario
+     *
+     * @ORM\ManyToOne(targetEntity="Usuario")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="usuario_idUsuario", referencedColumnName="idUsuario")
+     * })
+     */
+    private $usuarioIdusuario;
+
+    /**
      * @return int
      */
     public function getSintomaId(): int
@@ -68,7 +88,7 @@ class Sintoma
     /**
      * @return bool
      */
-    public function isAlteracoes()
+    public function isAlteracoes(): bool
     {
         return $this->alteracoes;
     }
@@ -76,7 +96,7 @@ class Sintoma
     /**
      * @param bool $alteracoes
      */
-    public function setAlteracoes(bool $alteracoes)
+    public function setAlteracoes(bool $alteracoes): void
     {
         $this->alteracoes = $alteracoes;
     }
@@ -84,7 +104,7 @@ class Sintoma
     /**
      * @return string
      */
-    public function getLocalAlteracoes()
+    public function getLocalAlteracoes(): string
     {
         return $this->localAlteracoes;
     }
@@ -92,7 +112,7 @@ class Sintoma
     /**
      * @param string $localAlteracoes
      */
-    public function setLocalAlteracoes(string $localAlteracoes)
+    public function setLocalAlteracoes(string $localAlteracoes): void
     {
         $this->localAlteracoes = $localAlteracoes;
     }
@@ -100,7 +120,7 @@ class Sintoma
     /**
      * @return string
      */
-    public function getLocalDores()
+    public function getLocalDores(): string
     {
         return $this->localDores;
     }
@@ -108,7 +128,7 @@ class Sintoma
     /**
      * @param string $localDores
      */
-    public function setLocalDores(string $localDores)
+    public function setLocalDores(string $localDores): void
     {
         $this->localDores = $localDores;
     }
@@ -116,7 +136,7 @@ class Sintoma
     /**
      * @return string
      */
-    public function getObservacoes()
+    public function getObservacoes(): string
     {
         return $this->observacoes;
     }
@@ -124,10 +144,54 @@ class Sintoma
     /**
      * @param string $observacoes
      */
-    public function setObservacoes(string $observacoes)
+    public function setObservacoes(string $observacoes): void
     {
         $this->observacoes = $observacoes;
     }
 
+    /**
+     * @return \Idoso
+     */
+    public function getIdosoIdoso(): \Idoso
+    {
+        return $this->idosoIdoso;
+    }
+
+    /**
+     * @param \Idoso $idosoIdoso
+     */
+    public function setIdosoIdoso(\Idoso $idosoIdoso): void
+    {
+        $this->idosoIdoso = $idosoIdoso;
+    }
+
+    /**
+     * @return \Usuario
+     */
+    public function getUsuarioIdusuario(): \Usuario
+    {
+        return $this->usuarioIdusuario;
+    }
+
+    /**
+     * @param \Usuario $usuarioIdusuario
+     */
+    public function setUsuarioIdusuario(\Usuario $usuarioIdusuario): void
+    {
+        $this->usuarioIdusuario = $usuarioIdusuario;
+    }
+
+    public function toArray()
+    {
+        return [
+            'idsintoma' => $this->getSintomaId(),
+            'alteracoes' => $this->isAlteracoes(),
+            'local_alteracoes' => $this->getLocalAlteracoes(),
+            'local_dores' => $this->getLocalAlteracoes(),
+            'observacoes' => $this->getObservacoes(),
+            'ididoso' => $this->getIdosoIdoso(),
+            'idusuario' => $this->getUsuarioIdusuario(),
+        ];
+    }
 
 }

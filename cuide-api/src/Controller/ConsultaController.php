@@ -18,7 +18,7 @@ class ConsultaController extends AbstractController
     /**
      * @Route("/", name="consulta_index", methods={"GET"})
      */
-    public function index(): Response
+    public function index(): JsonResponse
     {
         $consultas = $this->getDoctrine()->getManager()
             ->getRepository(Consulta::class)
@@ -44,6 +44,8 @@ class ConsultaController extends AbstractController
         $consulta->setHora($data['hora']);
         $consulta->setLocal($data['local']);
         $consulta->setMedico($data['medico']);
+        $consulta->setIdosoIdoso($data['ididoso']);
+        $consulta->setUsuarioIdusuario($data['idusuario']);
 
         $entityManager = $this->getDoctrine()->getManager();
         $entityManager->persist($consulta);
@@ -73,6 +75,8 @@ class ConsultaController extends AbstractController
         $consulta->setHora($data['hora']);
         $consulta->setLocal($data['local']);
         $consulta->setMedico($data['medico']);
+        $consulta->setIdosoIdoso($data['ididoso']);
+        $consulta->setUsuarioIdusuario($data['idusuario']);
 
         $entityManager = $this->getDoctrine()->getManager();
         $entityManager->persist($consulta);

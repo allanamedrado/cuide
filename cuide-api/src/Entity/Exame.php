@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Exame
  *
- * @ORM\Table(name="exame")
+ * @ORM\Table(name="exame", indexes={@ORM\Index(name="fk_exame_usuario1_idx", columns={"usuario_idUsuario"}), @ORM\Index(name="fk_exame_idoso1_idx", columns={"idoso_idoso_id"})})
  * @ORM\Entity
  */
 class Exame
@@ -43,9 +43,29 @@ class Exame
     private $local;
 
     /**
+     * @var \Idoso
+     *
+     * @ORM\ManyToOne(targetEntity="Idoso")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idoso_idoso_id", referencedColumnName="idoso_id")
+     * })
+     */
+    private $idosoIdoso;
+
+    /**
+     * @var \Usuario
+     *
+     * @ORM\ManyToOne(targetEntity="Usuario")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="usuario_idUsuario", referencedColumnName="idUsuario")
+     * })
+     */
+    private $usuarioIdusuario;
+
+    /**
      * @return int
      */
-    public function getExameId()
+    public function getExameId(): int
     {
         return $this->exameId;
     }
@@ -53,7 +73,7 @@ class Exame
     /**
      * @param int $exameId
      */
-    public function setExameId(int $exameId)
+    public function setExameId(int $exameId): void
     {
         $this->exameId = $exameId;
     }
@@ -61,7 +81,7 @@ class Exame
     /**
      * @return string
      */
-    public function getNome()
+    public function getNome(): string
     {
         return $this->nome;
     }
@@ -69,7 +89,7 @@ class Exame
     /**
      * @param string $nome
      */
-    public function setNome(string $nome)
+    public function setNome(string $nome): void
     {
         $this->nome = $nome;
     }
@@ -77,7 +97,7 @@ class Exame
     /**
      * @return string
      */
-    public function getData()
+    public function getData(): string
     {
         return $this->data;
     }
@@ -85,7 +105,7 @@ class Exame
     /**
      * @param string $data
      */
-    public function setData(string $data)
+    public function setData(string $data): void
     {
         $this->data = $data;
     }
@@ -93,7 +113,7 @@ class Exame
     /**
      * @return string
      */
-    public function getLocal()
+    public function getLocal(): string
     {
         return $this->local;
     }
@@ -101,10 +121,52 @@ class Exame
     /**
      * @param string $local
      */
-    public function setLocal(string $local)
+    public function setLocal(string $local): void
     {
         $this->local = $local;
     }
 
+    /**
+     * @return \Idoso
+     */
+    public function getIdosoIdoso(): \Idoso
+    {
+        return $this->idosoIdoso;
+    }
 
+    /**
+     * @param \Idoso $idosoIdoso
+     */
+    public function setIdosoIdoso(\Idoso $idosoIdoso): void
+    {
+        $this->idosoIdoso = $idosoIdoso;
+    }
+
+    /**
+     * @return \Usuario
+     */
+    public function getUsuarioIdusuario(): \Usuario
+    {
+        return $this->usuarioIdusuario;
+    }
+
+    /**
+     * @param \Usuario $usuarioIdusuario
+     */
+    public function setUsuarioIdusuario(\Usuario $usuarioIdusuario): void
+    {
+        $this->usuarioIdusuario = $usuarioIdusuario;
+    }
+
+    public function toArray()
+    {
+        return [
+            'idexame' => $this->getExameId(),
+            'nome' => $this->getNome(),
+            'data' => $this->getData(),
+            'local' => $this->getLocal(),
+            'ididoso' => $this->getIdosoIdoso(),
+            'idusuario' => $this->getUsuarioIdusuario(),
+        ];
+    }
 }

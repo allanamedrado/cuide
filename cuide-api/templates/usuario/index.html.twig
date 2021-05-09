@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<title>Usuario index</title>
+
+{% block body %}
+    <h1>Usuario index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Idusuario</th>
+                <th>Usuario</th>
+                <th>Senha</th>
+                <th>Categoria</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for usuario in usuarios %}
+            <tr>
+                <td>{{ usuario.idusuario }}</td>
+                <td>{{ usuario.usuario }}</td>
+                <td>{{ usuario.senha }}</td>
+                <td>{{ usuario.categoria }}</td>
+                <td>
+                    <a href="{{ path('usuario_show', {'idusuario': usuario.idusuario}) }}">show</a>
+                    <a href="{{ path('usuario_edit', {'idusuario': usuario.idusuario}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('usuario_new') }}">Create new</a>
+{% endblock %}

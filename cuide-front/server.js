@@ -3,22 +3,38 @@ const nunjucks = require('nunjucks')
 const routes = require('./routes')
 const methodOverride = require('method-override')
 
+<<<<<<< HEAD
 
 
 const server = express()
+=======
+const app = express()
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
+>>>>>>> cuide-chat
 
-server.use(express.urlencoded({extended: true})) 
-server.use(methodOverride('_method'))
-server.use(routes)
-server.use(express.static('public'))
+app.use(express.urlencoded({extended: true}))
+app.use(methodOverride('_method'))
+app.use(routes)
+app.use(express.static('public'))
 
-server.set("view engine", "njk")
+app.set("view engine", "njk")
 
 nunjucks.configure("src/views", {
-    express:server,
+    express:app,
     autoescape: false,
     noCache: true
 })
+let messages = [];
+
+io.on('connection', socket => {
+    socket.emit('previousMessages', messages);
+    socket.on('sendMessage', data => {
+        messages.push(data);
+        socket.broadcast.emit('receiveMessage', data);
+    });
+});
+
 
 
 server.listen(5000, function(){

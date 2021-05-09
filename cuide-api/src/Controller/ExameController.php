@@ -5,9 +5,11 @@ namespace App\Controller;
 use App\Entity\Exame;
 use App\Form\ExameType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Validator\Constraints\Json;
 
 /**
  * @Route("/exame")
@@ -17,38 +19,39 @@ class ExameController extends AbstractController
     /**
      * @Route("/", name="exame_index", methods={"GET"})
      */
-    public function index(): Response
+    public function index(): JsonResponse
     {
         $exames = $this->getDoctrine()
             ->getRepository(Exame::class)
             ->findAll();
+        $arrayExames = [];
+        foreach ($exames as $e){
+            array_push($arrayExames, $e->toArray());
+        }
+        return new JsonResponse($arrayExames, Response::HTTP_OK);
 
-        return $this->render('exame/index.html.twig', [
-            'exames' => $exames,
-        ]);
     }
 
     /**
-     * @Route("/new", name="exame_new", methods={"GET","POST"})
+     * @Route("/new", name="exame_new", methods={"POST"})
      */
     public function new(Request $request): Response
     {
+        $data = json_decode($request->query->get('exame'), true);
         $exame = new Exame();
-        $form = $this->createForm(ExameType::class, $exame);
-        $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($exame);
-            $entityManager->flush();
+        $exame->setNome($data['nome']);
+        $exame->setUsuarioIdusuario($data['idusuario']);
+        $exame->setIdosoIdoso($data['ididoso']);
+        $exame->setLocal($data['local']);
+        $exame->setData(data_create($data['data']));
 
-            return $this->redirectToRoute('exame_index');
-        }
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->persist($exame);
+        $entityManager->flush();
 
-        return $this->render('exame/new.html.twig', [
-            'exame' => $exame,
-            'form' => $form->createView(),
-        ]);
+        return new JsonResponse(['status' => 'exame marcado'], Response::HTTP_OK);
+
     }
 
     /**
@@ -56,42 +59,39 @@ class ExameController extends AbstractController
      */
     public function show(Exame $exame): Response
     {
-        return $this->render('exame/show.html.twig', [
-            'exame' => $exame,
-        ]);
+        return new JsonResponse($exame->toArray(), Response::HTTP_OK);
     }
 
     /**
-     * @Route("/{exameId}/edit", name="exame_edit", methods={"GET","POST"})
+     * @Route("/{exameId}/edit", name="exame_edit", methods={"PUT"})
      */
     public function edit(Request $request, Exame $exame): Response
     {
-        $form = $this->createForm(ExameType::class, $exame);
-        $form->handleRequest($request);
+        $data = json_decode($request->query->get('exame'), true);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
+        $exame->setNome($data['nome']);
+        $exame->setUsuarioIdusuario($data['idusuario']);
+        $exame->setIdosoIdoso($data['ididoso']);
+        $exame->setLocal($data['local']);
+        $exame->setData(data_create($data['data']));
 
-            return $this->redirectToRoute('exame_index');
-        }
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->persist($exame);
+        $entityManager->flush();
 
-        return $this->render('exame/edit.html.twig', [
-            'exame' => $exame,
-            'form' => $form->createView(),
-        ]);
+        return new JsonResponse(['status' => 'exame atualizado'], Response::HTTP_OK);
     }
 
     /**
-     * @Route("/{exameId}", name="exame_delete", methods={"POST"})
+     * @Route("/{exameId}/{hash}", name="exame_delete", methods={"DELETE"})
      */
-    public function delete(Request $request, Exame $exame): Response
+    public function delete(Exame $exame, $hash): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$exame->getExameId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($exame);
-            $entityManager->flush();
+        if(sha1(md5($exame->getExameId().$exame->getNome())) === $hash){
+            $this->getDoctrine()->getManager()->remove($exame);
+            $this->getDoctrine()->getManager()->flush();
+            return new JsonResponse(['status' => 'Item excluido!'], Response::HTTP_OK);
         }
-
-        return $this->redirectToRoute('exame_index');
+        return new JsonResponse(['status' => 'Codigo inválido!'], Response::HTTP_UNAUTHORIZED);
     }
 }

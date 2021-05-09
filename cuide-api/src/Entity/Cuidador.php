@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Cuidador
  *
- * @ORM\Table(name="cuidador")
+ * @ORM\Table(name="cuidador", indexes={@ORM\Index(name="fk_cuidador_Usuario1_idx", columns={"Usuario_idUsuario"})})
  * @ORM\Entity
  */
 class Cuidador
@@ -64,24 +64,19 @@ class Cuidador
     private $foto;
 
     /**
-     * @var \Doctrine\Common\Collections\Collection
+     * @var \Usuario
      *
-     * @ORM\ManyToMany(targetEntity="Idoso", mappedBy="cuidadorCuidador")
+     * @ORM\ManyToOne(targetEntity="Usuario")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="Usuario_idUsuario", referencedColumnName="idUsuario")
+     * })
      */
-    private $idosoIdoso;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->idosoIdoso = new \Doctrine\Common\Collections\ArrayCollection();
-    }
+    private $usuarioIdusuario;
 
     /**
      * @return int
      */
-    public function getCuidadorId()
+    public function getCuidadorId(): int
     {
         return $this->cuidadorId;
     }
@@ -89,7 +84,7 @@ class Cuidador
     /**
      * @param int $cuidadorId
      */
-    public function setCuidadorId(int $cuidadorId)
+    public function setCuidadorId(int $cuidadorId): void
     {
         $this->cuidadorId = $cuidadorId;
     }
@@ -97,7 +92,7 @@ class Cuidador
     /**
      * @return string
      */
-    public function getNome()
+    public function getNome(): string
     {
         return $this->nome;
     }
@@ -105,7 +100,7 @@ class Cuidador
     /**
      * @param string $nome
      */
-    public function setNome(string $nome)
+    public function setNome(string $nome): void
     {
         $this->nome = $nome;
     }
@@ -113,7 +108,7 @@ class Cuidador
     /**
      * @return string
      */
-    public function getCpf()
+    public function getCpf(): string
     {
         return $this->cpf;
     }
@@ -121,7 +116,7 @@ class Cuidador
     /**
      * @param string $cpf
      */
-    public function setCpf(string $cpf)
+    public function setCpf(string $cpf): void
     {
         $this->cpf = $cpf;
     }
@@ -129,7 +124,7 @@ class Cuidador
     /**
      * @return string
      */
-    public function getEmail()
+    public function getEmail(): string
     {
         return $this->email;
     }
@@ -137,7 +132,7 @@ class Cuidador
     /**
      * @param string $email
      */
-    public function setEmail(string $email)
+    public function setEmail(string $email): void
     {
         $this->email = $email;
     }
@@ -145,7 +140,7 @@ class Cuidador
     /**
      * @return string
      */
-    public function getDataNascimento()
+    public function getDataNascimento(): string
     {
         return $this->dataNascimento;
     }
@@ -153,7 +148,7 @@ class Cuidador
     /**
      * @param string $dataNascimento
      */
-    public function setDataNascimento(string $dataNascimento)
+    public function setDataNascimento(string $dataNascimento): void
     {
         $this->dataNascimento = $dataNascimento;
     }
@@ -161,7 +156,7 @@ class Cuidador
     /**
      * @return string
      */
-    public function getCertificacao()
+    public function getCertificacao(): string
     {
         return $this->certificacao;
     }
@@ -169,7 +164,7 @@ class Cuidador
     /**
      * @param string $certificacao
      */
-    public function setCertificacao(string $certificacao)
+    public function setCertificacao(string $certificacao): void
     {
         $this->certificacao = $certificacao;
     }
@@ -177,7 +172,7 @@ class Cuidador
     /**
      * @return string
      */
-    public function getFoto()
+    public function getFoto(): string
     {
         return $this->foto;
     }
@@ -185,25 +180,40 @@ class Cuidador
     /**
      * @param string $foto
      */
-    public function setFoto(string $foto)
+    public function setFoto(string $foto): void
     {
         $this->foto = $foto;
     }
 
     /**
-     * @return \Doctrine\Common\Collections\Collection
+     * @return \Usuario
      */
-    public function getIdosoIdoso()
+    public function getUsuarioIdusuario(): \Usuario
     {
-        return $this->idosoIdoso;
+        return $this->usuarioIdusuario;
     }
 
     /**
-     * @param \Doctrine\Common\Collections\Collection $idosoIdoso
+     * @param \Usuario $usuarioIdusuario
      */
-    public function setIdosoIdoso($idosoIdoso): void
+    public function setUsuarioIdusuario(\Usuario $usuarioIdusuario): void
     {
-        $this->idosoIdoso = $idosoIdoso;
+        $this->usuarioIdusuario = $usuarioIdusuario;
+    }
+
+    public function toArray()
+    {
+        return [
+            'idcuidador' => $this->getCuidadorId(),
+            'nome' => $this->getNome(),
+            'cpf' => $this->getCpf(),
+            'email' => $this->getEmail(),
+            'data_nascimento' => $this->getDataNascimento(),
+            'certificacao' => $this->getCertificacao(),
+            'foto' => $this->getFoto(),
+            'idusuario' => $this->getUsuarioIdusuario(),
+
+        ];
     }
 
 
