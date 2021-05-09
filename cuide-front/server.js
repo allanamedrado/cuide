@@ -3,15 +3,9 @@ const nunjucks = require('nunjucks')
 const routes = require('./routes')
 const methodOverride = require('method-override')
 
-<<<<<<< HEAD
-
-
-const server = express()
-=======
 const app = express()
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
->>>>>>> cuide-chat
 
 app.use(express.urlencoded({extended: true}))
 app.use(methodOverride('_method'))
@@ -34,8 +28,6 @@ io.on('connection', socket => {
         socket.broadcast.emit('receiveMessage', data);
     });
 });
-
-
 
 server.listen(5000, function(){
     console.log("server is running")

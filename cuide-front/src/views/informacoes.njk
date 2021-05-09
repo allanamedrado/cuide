@@ -1,28 +1,22 @@
 {% extends "home.njk" %}
 
-
 {%block content%}
 
-        <form action="/save" method ="POST">
-            <main class="form-informacoes">
-                <h1>Informações</h1>
-                
-        
-        <div>
-            <img src="https://iconarchive.com/download/i52485/custom-icon-design/pretty-office-8/User-blue.ico" height="50">
-        </div>
+  <h1>Informações</h1>
+  <form action="/save" method ="POST">
+    <main class="form-informacoes">
 
-        <div>
-          <h2>João da Silva</h2>
-          <h2>cpf: 123.456.789-10</h2>
-          <h2>Email: joao@gmail.com</h2>
-          <h2>Data de Nascimento: 20/06/1970</h2>
-          
-        </div>
+      <div>
+        <img src="https://iconarchive.com/download/i52485/custom-icon-design/pretty-office-8/User-blue.ico" height="50">
+      </div>
 
+      <div>
+        <h2>João da Silva</h2>
+        <h2>CPF: 123.456.789-10</h2>
+        <h2>Email: joao@gmail.com</h2>
+        <h2>Data de Nascimento: 20/06/1970</h2>
 
-
-
-
-        </form>
+      </div>
+    </main>
+  </form>
 {%endblock%}

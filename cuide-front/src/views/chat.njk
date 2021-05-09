@@ -1,60 +1,22 @@
 {% extends "home.njk" %}
 
-{% block style %}
-<style>
-html, body {
-    height: 100%;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-#chat {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-input {
-    width: 600px;
-    border: 1px solid #ddd;
-    height: 50px;
-    padding: 0 20px;
-    font-size: 14px;
-}
-
-button {
-    width: 600px;
-    height: 50px;
-    font-size: 14px;
-    background: #069;
-    text-align: center;
-    line-height: 50px;
-    font-weight: bold;
-    color: #FFF;
-    margin-top: 10px;
-}
-
-.messages {
-    width: 600px;
-    height: 400px;
-    margin: 20px 0;
-    border: 1px solid #ddd;
-    padding: 20px;
-}
-</style>
-{% endblock %}
-
 {% block content %}
- <form id="chat">
-        <input type="text" name="username" placeholder="Digite seu usuario">
+
+    <h1>CHAT</h1>
+
+    <section class="message">
         <div class="messages"></div>
-        <input type="text" name="message" placeholder="Digite sua mensagem">
-        <button type="submit">Enviar</button>
+    </section>
+
+    <form id="chat-form">    
+        <div class="chat-input">    
+            <input type="text" name="username"  placeholder="Digite seu usuario">        
+            <input type="text" name="message" placeholder="Digite sua mensagem">
+        </div>
+        <button class="button-chat"type="submit"><img src="/img/send1-01.svg"</img></button>
     </form>
+    
+<script src="socket.io/socket.io.js"></script>
+
+
 {% endblock %}
