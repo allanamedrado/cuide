@@ -1,11 +1,12 @@
 {% extends "home.njk" %}
 
 
-        {% block content %}            
-        
+        {% block content %}   
+
+        <h1>Cadastro</h1>
         <form action="/cuidadores" method ="POST">
-            <main class="form-cuidador">
-                <h1>Cadastro</h1>
+            <main class="form-cuidador" id="form-cuidador">
+                
 
                 <div class="field-group">
                     <div class="field">
@@ -49,7 +50,8 @@
                     
                 </div>
 
-                <button class="button-save">Salvar</button>
+                <button class="button-save" type="submit">Salvar</button>
             </main>
         </form>
-    {% endblock %}
+{% endblock %}
+

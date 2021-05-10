@@ -2,8 +2,8 @@
 
 {%block content%}
     <h1>Consultas</h1>
-    <form action="/save" method ="POST">
-        <main class="form-medicamento">
+    <form action="https://localhost:8000/consulta/new" method ="POST">
+        <main class="form-medicamento" id="form-consulta">
 
             <div class="field-group">
                 <div class="field">
@@ -33,7 +33,7 @@
 
             <div class="field">
                 <label for="name">Local</label>
-                <input type="text" name="hour" required="required">
+                <input type="text" name="local" required="required">
             </div>
 
             <button class="button-save">Salvar</button>
@@ -42,9 +42,34 @@
 {%endblock%}
 {% block javascript %}
 <script>
+
+async function postContent(){
+    postContent = () => {
+        axios({
+            method: 'post',
+            url: 'https://localhost:8000/consulta/new',
+            data: {
+                name: 'teste',
+                qtd: 'teste',
+                date: 20/12/1997,
+                hour: '15h',
+                local: 'teste'
+            },
+            json: true,
+        }).then((data) => {
+            console.log(data)
+        }).catch((error) => {
+            console.log(error)
+        })
+    }
+}
+
+postContent();
+
     async function getContent(){
         try{
-            const response = await fetch('http://localhost:8000/usuario');
+            const response = await fetch('http://localhost:8000/consulta');
+            console.log(response)
             const data = await response.json();
             console.log(data);
         }catch(error){

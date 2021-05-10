@@ -39,13 +39,20 @@ routes.get("/chat", function(req, res) {
     return res.render("chat")
 })
 
-routes.get("/cuidadores/index", cuidadores.index)
-routes.get("/cuidadores/create", cuidadores.create)
-routes.get("/cuidadores/:id", cuidadores.show)
-routes.get("/cuidadores/:id/edit", cuidadores.edit)
-routes.post("/cuidadores", cuidadores.post)
-routes.put("/cuidadores", cuidadores.update)
-routes.delete("/cuidadores", cuidadores.delete)
+routes.get("/cuidadores/show", function(req, res) {
+    return res.render("cuidadores/show")
+})
+
+routes.get("/consultas", cuidadores)
+routes.post("/consultas", cuidadores)
+
+//routes.get("/cuidadores/create", cuidadores)
+//routes.get("/cuidadores/create", cuidadores.create)
+//routes.get("/cuidadores/:id", cuidadores.show)
+//routes.get("/cuidadores/:id/edit", cuidadores.edit)
+//routes.post("/cuidadores", cuidadores.post)
+//routes.put("/cuidadores", cuidadores.update)
+//routes.delete("/cuidadores", cuidadores.delete)
 
 
 module.exports = routes
