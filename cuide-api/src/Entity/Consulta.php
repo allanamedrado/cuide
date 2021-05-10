@@ -79,7 +79,7 @@ class Consulta
     /**
      * @return int
      */
-    public function getConsultaId(): int
+    public function getConsultaId()
     {
         return $this->consultaId;
     }
@@ -87,7 +87,7 @@ class Consulta
     /**
      * @param int $consultaId
      */
-    public function setConsultaId(int $consultaId): void
+    public function setConsultaId(int $consultaId)
     {
         $this->consultaId = $consultaId;
     }
@@ -95,7 +95,7 @@ class Consulta
     /**
      * @return string
      */
-    public function getMedico(): string
+    public function getMedico()
     {
         return $this->medico;
     }
@@ -103,7 +103,7 @@ class Consulta
     /**
      * @param string $medico
      */
-    public function setMedico(string $medico): void
+    public function setMedico(string $medico)
     {
         $this->medico = $medico;
     }
@@ -111,7 +111,7 @@ class Consulta
     /**
      * @return string
      */
-    public function getEspecialidade(): string
+    public function getEspecialidade()
     {
         return $this->especialidade;
     }
@@ -119,7 +119,7 @@ class Consulta
     /**
      * @param string $especialidade
      */
-    public function setEspecialidade(string $especialidade): void
+    public function setEspecialidade(string $especialidade)
     {
         $this->especialidade = $especialidade;
     }
@@ -135,7 +135,7 @@ class Consulta
     /**
      * @param \DateTime $data
      */
-    public function setData(\DateTime $data): void
+    public function setData(\DateTime $data)
     {
         $this->data = $data;
     }
@@ -143,7 +143,7 @@ class Consulta
     /**
      * @return string
      */
-    public function getHora(): string
+    public function getHora()
     {
         return $this->hora;
     }
@@ -151,7 +151,7 @@ class Consulta
     /**
      * @param string $hora
      */
-    public function setHora(string $hora): void
+    public function setHora(string $hora)
     {
         $this->hora = $hora;
     }
@@ -159,7 +159,7 @@ class Consulta
     /**
      * @return string
      */
-    public function getLocal(): string
+    public function getLocal()
     {
         return $this->local;
     }
@@ -167,7 +167,7 @@ class Consulta
     /**
      * @param string $local
      */
-    public function setLocal(string $local): void
+    public function setLocal(string $local)
     {
         $this->local = $local;
     }
@@ -175,7 +175,7 @@ class Consulta
     /**
      * @return \Idoso
      */
-    public function getIdosoIdoso(): \Idoso
+    public function getIdosoIdoso()
     {
         return $this->idosoIdoso;
     }
@@ -183,7 +183,7 @@ class Consulta
     /**
      * @param \Idoso $idosoIdoso
      */
-    public function setIdosoIdoso(\Idoso $idosoIdoso): void
+    public function setIdosoIdoso(\Idoso $idosoIdoso)
     {
         $this->idosoIdoso = $idosoIdoso;
     }
@@ -191,7 +191,7 @@ class Consulta
     /**
      * @return \Usuario
      */
-    public function getUsuarioIdusuario(): \Usuario
+    public function getUsuarioIdusuario()
     {
         return $this->usuarioIdusuario;
     }
@@ -199,7 +199,7 @@ class Consulta
     /**
      * @param \Usuario $usuarioIdusuario
      */
-    public function setUsuarioIdusuario(\Usuario $usuarioIdusuario): void
+    public function setUsuarioIdusuario(\Usuario $usuarioIdusuario)
     {
         $this->usuarioIdusuario = $usuarioIdusuario;
     }
@@ -213,8 +213,8 @@ class Consulta
             'data' => $this->getData(),
             'hora' => $this->getHora(),
             'local' => $this->getLocal(),
-            'ididoso' => $this->getIdosoIdoso(),
-            'idusuario' => $this->getUsuarioIdusuario()
+            'ididoso' => $this->getIdosoIdoso()->getIdosoId(),
+            'idusuario' => $this->getUsuarioIdusuario()->getIdusuario()
         ];
 
     }

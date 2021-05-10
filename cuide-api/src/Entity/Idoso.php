@@ -79,7 +79,7 @@ class Idoso
     /**
      * @return int
      */
-    public function getIdosoId(): int
+    public function getIdosoId()
     {
         return $this->idosoId;
     }
@@ -87,7 +87,7 @@ class Idoso
     /**
      * @param int $idosoId
      */
-    public function setIdosoId(int $idosoId): void
+    public function setIdosoId(int $idosoId)
     {
         $this->idosoId = $idosoId;
     }
@@ -95,7 +95,7 @@ class Idoso
     /**
      * @return string
      */
-    public function getNome(): string
+    public function getNome()
     {
         return $this->nome;
     }
@@ -103,7 +103,7 @@ class Idoso
     /**
      * @param string $nome
      */
-    public function setNome(string $nome): void
+    public function setNome(string $nome)
     {
         $this->nome = $nome;
     }
@@ -111,7 +111,7 @@ class Idoso
     /**
      * @return string
      */
-    public function getCpf(): string
+    public function getCpf()
     {
         return $this->cpf;
     }
@@ -119,7 +119,7 @@ class Idoso
     /**
      * @param string $cpf
      */
-    public function setCpf(string $cpf): void
+    public function setCpf(string $cpf)
     {
         $this->cpf = $cpf;
     }
@@ -127,7 +127,7 @@ class Idoso
     /**
      * @return string
      */
-    public function getEmail(): string
+    public function getEmail()
     {
         return $this->email;
     }
@@ -135,7 +135,7 @@ class Idoso
     /**
      * @param string $email
      */
-    public function setEmail(string $email): void
+    public function setEmail(string $email)
     {
         $this->email = $email;
     }
@@ -143,7 +143,7 @@ class Idoso
     /**
      * @return \DateTime
      */
-    public function getDataNascimento(): \DateTime
+    public function getDataNascimento()
     {
         return $this->dataNascimento;
     }
@@ -151,7 +151,7 @@ class Idoso
     /**
      * @param \DateTime $dataNascimento
      */
-    public function setDataNascimento(\DateTime $dataNascimento): void
+    public function setDataNascimento(\DateTime $dataNascimento)
     {
         $this->dataNascimento = $dataNascimento;
     }
@@ -159,7 +159,7 @@ class Idoso
     /**
      * @return string
      */
-    public function getEndereco(): string
+    public function getEndereco()
     {
         return $this->endereco;
     }
@@ -167,7 +167,7 @@ class Idoso
     /**
      * @param string $endereco
      */
-    public function setEndereco(string $endereco): void
+    public function setEndereco(string $endereco)
     {
         $this->endereco = $endereco;
     }
@@ -175,15 +175,15 @@ class Idoso
     /**
      * @return \Usuario
      */
-    public function getUsuarioIdusuario(): \Usuario
+    public function getUsuarioIdusuario()
     {
         return $this->usuarioIdusuario;
     }
 
     /**
-     * @param \Usuario $usuarioIdusuario
+     * @param Usuario $usuarioIdusuario
      */
-    public function setUsuarioIdusuario(\Usuario $usuarioIdusuario): void
+    public function setUsuarioIdusuario(Usuario $usuarioIdusuario)
     {
         $this->usuarioIdusuario = $usuarioIdusuario;
     }
@@ -191,7 +191,7 @@ class Idoso
     /**
      * @return \Cuidador
      */
-    public function getCuidadorCuidador(): \Cuidador
+    public function getCuidadorCuidador()
     {
         return $this->cuidadorCuidador;
     }
@@ -199,7 +199,7 @@ class Idoso
     /**
      * @param \Cuidador $cuidadorCuidador
      */
-    public function setCuidadorCuidador(\Cuidador $cuidadorCuidador): void
+    public function setCuidadorCuidador(Cuidador $cuidadorCuidador)
     {
         $this->cuidadorCuidador = $cuidadorCuidador;
     }
@@ -213,7 +213,7 @@ class Idoso
             'email' => $this->getEmail(),
             'data_nascimento' => $this->getDataNascimento(),
             'endereco' => $this->getEndereco(),
-            'idusuario' => $this->getUsuarioIdusuario(),
+            'idusuario' => $this->getUsuarioIdusuario()->getIdusuario(),
             'idcuidador' => $this->getCuidadorCuidador(),
         ];
     }

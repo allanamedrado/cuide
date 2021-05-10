@@ -45,7 +45,7 @@ class Usuario
     /**
      * @return int
      */
-    public function getIdusuario(): int
+    public function getIdusuario()
     {
         return $this->idusuario;
     }
@@ -53,7 +53,7 @@ class Usuario
     /**
      * @param int $idusuario
      */
-    public function setIdusuario(int $idusuario): void
+    public function setIdusuario(int $idusuario)
     {
         $this->idusuario = $idusuario;
     }
@@ -61,7 +61,7 @@ class Usuario
     /**
      * @return string
      */
-    public function getUsuario(): string
+    public function getUsuario()
     {
         return $this->usuario;
     }
@@ -69,7 +69,7 @@ class Usuario
     /**
      * @param string $usuario
      */
-    public function setUsuario(string $usuario): void
+    public function setUsuario(string $usuario)
     {
         $this->usuario = $usuario;
     }
@@ -77,7 +77,7 @@ class Usuario
     /**
      * @return string
      */
-    public function getSenha(): string
+    public function getSenha()
     {
         return $this->senha;
     }
@@ -85,7 +85,7 @@ class Usuario
     /**
      * @param string $senha
      */
-    public function setSenha(string $senha): void
+    public function setSenha(string $senha)
     {
         $this->senha = $senha;
     }
@@ -93,7 +93,7 @@ class Usuario
     /**
      * @return string
      */
-    public function getCategoria(): string
+    public function getCategoria()
     {
         return $this->categoria;
     }
@@ -101,7 +101,7 @@ class Usuario
     /**
      * @param string $categoria
      */
-    public function setCategoria(string $categoria): void
+    public function setCategoria(string $categoria)
     {
         $this->categoria = $categoria;
     }

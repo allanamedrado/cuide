@@ -150,7 +150,7 @@ class Medicamento
     /**
      * @return \DateTime
      */
-    public function getDataInicio(): \DateTime
+    public function getDataInicio()
     {
         return $this->dataInicio;
     }
@@ -158,7 +158,7 @@ class Medicamento
     /**
      * @param \DateTime $dataInicio
      */
-    public function setDataInicio(\DateTime $dataInicio): void
+    public function setDataInicio(\DateTime $dataInicio)
     {
         $this->dataInicio = $dataInicio;
     }
@@ -166,7 +166,7 @@ class Medicamento
     /**
      * @return \DateTime
      */
-    public function getDataFim(): \DateTime
+    public function getDataFim()
     {
         return $this->dataFim;
     }
@@ -174,7 +174,7 @@ class Medicamento
     /**
      * @param \DateTime $dataFim
      */
-    public function setDataFim(\DateTime $dataFim): void
+    public function setDataFim(\DateTime $dataFim)
     {
         $this->dataFim = $dataFim;
     }
@@ -182,7 +182,7 @@ class Medicamento
     /**
      * @return string
      */
-    public function getHorario(): string
+    public function getHorario()
     {
         return $this->horario;
     }
@@ -190,7 +190,7 @@ class Medicamento
     /**
      * @param string $horario
      */
-    public function setHorario(string $horario): void
+    public function setHorario(string $horario)
     {
         $this->horario = $horario;
     }
@@ -198,7 +198,7 @@ class Medicamento
     /**
      * @return \Idoso
      */
-    public function getIdosoIdoso(): \Idoso
+    public function getIdosoIdoso()
     {
         return $this->idosoIdoso;
     }
@@ -206,7 +206,7 @@ class Medicamento
     /**
      * @param \Idoso $idosoIdoso
      */
-    public function setIdosoIdoso(\Idoso $idosoIdoso): void
+    public function setIdosoIdoso(\Idoso $idosoIdoso)
     {
         $this->idosoIdoso = $idosoIdoso;
     }
@@ -214,7 +214,7 @@ class Medicamento
     /**
      * @return \Usuario
      */
-    public function getUsuarioIdusuario(): \Usuario
+    public function getUsuarioIdusuario()
     {
         return $this->usuarioIdusuario;
     }
@@ -222,7 +222,7 @@ class Medicamento
     /**
      * @param \Usuario $usuarioIdusuario
      */
-    public function setUsuarioIdusuario(\Usuario $usuarioIdusuario): void
+    public function setUsuarioIdusuario(\Usuario $usuarioIdusuario)
     {
         $this->usuarioIdusuario = $usuarioIdusuario;
     }
@@ -237,8 +237,8 @@ class Medicamento
             'data_inicio' => $this->getDataInicio(),
             'data_fim' => $this->getDataFim(),
             'horario' => $this->getHorario(),
-            'ididoso' => $this->getIdosoIdoso(),
-            'idusuario' => $this->getUsuarioIdusuario(),
+            'ididoso' => $this->getIdosoIdoso()->getIdosoId(),
+            'idusuario' => $this->getUsuarioIdusuario()->getIdusuario()
         ];
     }
 

@@ -102,6 +102,13 @@
       <change beforePath="$PROJECT_DIR$/../chat-socketio/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../chat-socketio/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cuide-api/src/Controller/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Controller/UsuarioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Consulta.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Consulta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Cuidador.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Cuidador.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Exame.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Exame.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Idoso.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Idoso.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Medicamento.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Medicamento.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Sintoma.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Sintoma.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Entity/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Entity/Usuario.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

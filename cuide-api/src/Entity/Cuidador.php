@@ -76,7 +76,7 @@ class Cuidador
     /**
      * @return int
      */
-    public function getCuidadorId(): int
+    public function getCuidadorId()
     {
         return $this->cuidadorId;
     }
@@ -84,7 +84,7 @@ class Cuidador
     /**
      * @param int $cuidadorId
      */
-    public function setCuidadorId(int $cuidadorId): void
+    public function setCuidadorId(int $cuidadorId)
     {
         $this->cuidadorId = $cuidadorId;
     }
@@ -92,7 +92,7 @@ class Cuidador
     /**
      * @return string
      */
-    public function getNome(): string
+    public function getNome()
     {
         return $this->nome;
     }
@@ -100,7 +100,7 @@ class Cuidador
     /**
      * @param string $nome
      */
-    public function setNome(string $nome): void
+    public function setNome(string $nome)
     {
         $this->nome = $nome;
     }
@@ -108,7 +108,7 @@ class Cuidador
     /**
      * @return string
      */
-    public function getCpf(): string
+    public function getCpf()
     {
         return $this->cpf;
     }
@@ -116,7 +116,7 @@ class Cuidador
     /**
      * @param string $cpf
      */
-    public function setCpf(string $cpf): void
+    public function setCpf(string $cpf)
     {
         $this->cpf = $cpf;
     }
@@ -124,7 +124,7 @@ class Cuidador
     /**
      * @return string
      */
-    public function getEmail(): string
+    public function getEmail()
     {
         return $this->email;
     }
@@ -132,7 +132,7 @@ class Cuidador
     /**
      * @param string $email
      */
-    public function setEmail(string $email): void
+    public function setEmail(string $email)
     {
         $this->email = $email;
     }
@@ -140,7 +140,7 @@ class Cuidador
     /**
      * @return string
      */
-    public function getDataNascimento(): string
+    public function getDataNascimento()
     {
         return $this->dataNascimento;
     }
@@ -148,7 +148,7 @@ class Cuidador
     /**
      * @param string $dataNascimento
      */
-    public function setDataNascimento(string $dataNascimento): void
+    public function setDataNascimento(string $dataNascimento)
     {
         $this->dataNascimento = $dataNascimento;
     }
@@ -156,7 +156,7 @@ class Cuidador
     /**
      * @return string
      */
-    public function getCertificacao(): string
+    public function getCertificacao()
     {
         return $this->certificacao;
     }
@@ -164,7 +164,7 @@ class Cuidador
     /**
      * @param string $certificacao
      */
-    public function setCertificacao(string $certificacao): void
+    public function setCertificacao(string $certificacao)
     {
         $this->certificacao = $certificacao;
     }
@@ -172,7 +172,7 @@ class Cuidador
     /**
      * @return string
      */
-    public function getFoto(): string
+    public function getFoto()
     {
         return $this->foto;
     }
@@ -180,7 +180,7 @@ class Cuidador
     /**
      * @param string $foto
      */
-    public function setFoto(string $foto): void
+    public function setFoto(string $foto)
     {
         $this->foto = $foto;
     }
@@ -188,7 +188,7 @@ class Cuidador
     /**
      * @return \Usuario
      */
-    public function getUsuarioIdusuario(): \Usuario
+    public function getUsuarioIdusuario()
     {
         return $this->usuarioIdusuario;
     }
@@ -196,7 +196,7 @@ class Cuidador
     /**
      * @param \Usuario $usuarioIdusuario
      */
-    public function setUsuarioIdusuario(\Usuario $usuarioIdusuario): void
+    public function setUsuarioIdusuario(Usuario $usuarioIdusuario)
     {
         $this->usuarioIdusuario = $usuarioIdusuario;
     }
@@ -211,7 +211,7 @@ class Cuidador
             'data_nascimento' => $this->getDataNascimento(),
             'certificacao' => $this->getCertificacao(),
             'foto' => $this->getFoto(),
-            'idusuario' => $this->getUsuarioIdusuario(),
+            'idusuario' => $this->getUsuarioIdusuario()->getIdusuario()
 
         ];
     }

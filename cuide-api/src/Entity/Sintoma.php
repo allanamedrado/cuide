@@ -72,7 +72,7 @@ class Sintoma
     /**
      * @return int
      */
-    public function getSintomaId(): int
+    public function getSintomaId()
     {
         return $this->sintomaId;
     }
@@ -80,7 +80,7 @@ class Sintoma
     /**
      * @param int $sintomaId
      */
-    public function setSintomaId(int $sintomaId): void
+    public function setSintomaId(int $sintomaId)
     {
         $this->sintomaId = $sintomaId;
     }
@@ -88,7 +88,7 @@ class Sintoma
     /**
      * @return bool
      */
-    public function isAlteracoes(): bool
+    public function isAlteracoes()
     {
         return $this->alteracoes;
     }
@@ -96,7 +96,7 @@ class Sintoma
     /**
      * @param bool $alteracoes
      */
-    public function setAlteracoes(bool $alteracoes): void
+    public function setAlteracoes(bool $alteracoes)
     {
         $this->alteracoes = $alteracoes;
     }
@@ -104,7 +104,7 @@ class Sintoma
     /**
      * @return string
      */
-    public function getLocalAlteracoes(): string
+    public function getLocalAlteracoes()
     {
         return $this->localAlteracoes;
     }
@@ -112,7 +112,7 @@ class Sintoma
     /**
      * @param string $localAlteracoes
      */
-    public function setLocalAlteracoes(string $localAlteracoes): void
+    public function setLocalAlteracoes(string $localAlteracoes)
     {
         $this->localAlteracoes = $localAlteracoes;
     }
@@ -120,7 +120,7 @@ class Sintoma
     /**
      * @return string
      */
-    public function getLocalDores(): string
+    public function getLocalDores()
     {
         return $this->localDores;
     }
@@ -128,7 +128,7 @@ class Sintoma
     /**
      * @param string $localDores
      */
-    public function setLocalDores(string $localDores): void
+    public function setLocalDores(string $localDores)
     {
         $this->localDores = $localDores;
     }
@@ -136,7 +136,7 @@ class Sintoma
     /**
      * @return string
      */
-    public function getObservacoes(): string
+    public function getObservacoes()
     {
         return $this->observacoes;
     }
@@ -144,7 +144,7 @@ class Sintoma
     /**
      * @param string $observacoes
      */
-    public function setObservacoes(string $observacoes): void
+    public function setObservacoes(string $observacoes)
     {
         $this->observacoes = $observacoes;
     }
@@ -152,7 +152,7 @@ class Sintoma
     /**
      * @return \Idoso
      */
-    public function getIdosoIdoso(): \Idoso
+    public function getIdosoIdoso()
     {
         return $this->idosoIdoso;
     }
@@ -160,7 +160,7 @@ class Sintoma
     /**
      * @param \Idoso $idosoIdoso
      */
-    public function setIdosoIdoso(\Idoso $idosoIdoso): void
+    public function setIdosoIdoso(\Idoso $idosoIdoso)
     {
         $this->idosoIdoso = $idosoIdoso;
     }
@@ -168,7 +168,7 @@ class Sintoma
     /**
      * @return \Usuario
      */
-    public function getUsuarioIdusuario(): \Usuario
+    public function getUsuarioIdusuario()
     {
         return $this->usuarioIdusuario;
     }
@@ -176,7 +176,7 @@ class Sintoma
     /**
      * @param \Usuario $usuarioIdusuario
      */
-    public function setUsuarioIdusuario(\Usuario $usuarioIdusuario): void
+    public function setUsuarioIdusuario(\Usuario $usuarioIdusuario)
     {
         $this->usuarioIdusuario = $usuarioIdusuario;
     }
@@ -189,8 +189,8 @@ class Sintoma
             'local_alteracoes' => $this->getLocalAlteracoes(),
             'local_dores' => $this->getLocalAlteracoes(),
             'observacoes' => $this->getObservacoes(),
-            'ididoso' => $this->getIdosoIdoso(),
-            'idusuario' => $this->getUsuarioIdusuario(),
+            'ididoso' => $this->getIdosoIdoso()->getIdosoId(),
+            'idusuario' => $this->getUsuarioIdusuario()->getIdusuario()
         ];
     }
 

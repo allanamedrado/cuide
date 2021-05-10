@@ -129,7 +129,7 @@ class UsuarioController extends AbstractController
      */
     public function getSession(Request $request): JsonResponse
     {
-        
+
         return new JsonResponse(
             [
                 'usuario' => $request->getSession()->get('usuario'),

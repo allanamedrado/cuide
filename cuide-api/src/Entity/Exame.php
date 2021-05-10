@@ -65,7 +65,7 @@ class Exame
     /**
      * @return int
      */
-    public function getExameId(): int
+    public function getExameId()
     {
         return $this->exameId;
     }
@@ -73,7 +73,7 @@ class Exame
     /**
      * @param int $exameId
      */
-    public function setExameId(int $exameId): void
+    public function setExameId(int $exameId)
     {
         $this->exameId = $exameId;
     }
@@ -81,7 +81,7 @@ class Exame
     /**
      * @return string
      */
-    public function getNome(): string
+    public function getNome()
     {
         return $this->nome;
     }
@@ -89,7 +89,7 @@ class Exame
     /**
      * @param string $nome
      */
-    public function setNome(string $nome): void
+    public function setNome(string $nome)
     {
         $this->nome = $nome;
     }
@@ -97,7 +97,7 @@ class Exame
     /**
      * @return string
      */
-    public function getData(): string
+    public function getData()
     {
         return $this->data;
     }
@@ -105,7 +105,7 @@ class Exame
     /**
      * @param string $data
      */
-    public function setData(string $data): void
+    public function setData(string $data)
     {
         $this->data = $data;
     }
@@ -113,7 +113,7 @@ class Exame
     /**
      * @return string
      */
-    public function getLocal(): string
+    public function getLocal()
     {
         return $this->local;
     }
@@ -121,7 +121,7 @@ class Exame
     /**
      * @param string $local
      */
-    public function setLocal(string $local): void
+    public function setLocal(string $local)
     {
         $this->local = $local;
     }
@@ -129,7 +129,7 @@ class Exame
     /**
      * @return \Idoso
      */
-    public function getIdosoIdoso(): \Idoso
+    public function getIdosoIdoso()
     {
         return $this->idosoIdoso;
     }
@@ -137,7 +137,7 @@ class Exame
     /**
      * @param \Idoso $idosoIdoso
      */
-    public function setIdosoIdoso(\Idoso $idosoIdoso): void
+    public function setIdosoIdoso(\Idoso $idosoIdoso)
     {
         $this->idosoIdoso = $idosoIdoso;
     }
@@ -145,7 +145,7 @@ class Exame
     /**
      * @return \Usuario
      */
-    public function getUsuarioIdusuario(): \Usuario
+    public function getUsuarioIdusuario()
     {
         return $this->usuarioIdusuario;
     }
@@ -153,7 +153,7 @@ class Exame
     /**
      * @param \Usuario $usuarioIdusuario
      */
-    public function setUsuarioIdusuario(\Usuario $usuarioIdusuario): void
+    public function setUsuarioIdusuario(\Usuario $usuarioIdusuario)
     {
         $this->usuarioIdusuario = $usuarioIdusuario;
     }
@@ -165,8 +165,8 @@ class Exame
             'nome' => $this->getNome(),
             'data' => $this->getData(),
             'local' => $this->getLocal(),
-            'ididoso' => $this->getIdosoIdoso(),
-            'idusuario' => $this->getUsuarioIdusuario(),
+            'ididoso' => $this->getIdosoIdoso()->getIdosoId(),
+            'idusuario' => $this->getUsuarioIdusuario()->getIdusuario()
         ];
     }
 }
