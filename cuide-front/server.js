@@ -7,7 +7,6 @@ const app = express()
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
 
-
 app.use(express.urlencoded({extended: true}))
 app.use(methodOverride('_method'))
 app.use(routes)
@@ -29,8 +28,6 @@ io.on('connection', socket => {
         socket.broadcast.emit('receiveMessage', data);
     });
 });
-
-
 
 server.listen(5000, function(){
     console.log("server is running")

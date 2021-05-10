@@ -90,25 +90,26 @@ span a{
     color: white;
 }
 
+.home-chat img {
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
 /* PAGE CUIDADOR*/
 
+h1 {
+    margin-top: 50px;
+}
+
 .form-cuidador,
-.form-medicamento{
+.form-medicamento,
+.form-informacoes,
+.form-exames,
+.form-sintomas{
     background-color: #4291CA;
     padding: 10px;
-}
-.form-informacoes{
-    background-color: #4291CA;
-    padding: 10px;
-}
-
-.form-exames{
-    background-color: #4291CA;
-    padding: 10px;
-}
-
-.form-exames input{
-    border-radius: 8px;
 }
 
 .field{
@@ -119,7 +120,10 @@ span a{
     margin-bottom: 5px;
 }
 
-.form-medicamento input {
+.form-medicamento input,
+.form-exames input,
+.form-cuidador input,
+.form-sintomas input {
     background-color: #f0f0f5;
     border: 0;
     padding: 4px 16px;
@@ -130,17 +134,20 @@ span a{
     width: 100%;
     max-width: 200px;
 }
+.radio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 10px;
+    text-align: center;
+}
 
-.form-cuidador input{
-    background-color: #f0f0f5;
-    border: 0;
-    padding: 4px 16px;
-    font-size: 16px;
-    outline: none;
-    border-radius: 8px;
-    margin-top: 2px;
-    width: 100%;
-    max-width: 200px;
+.field input[type=radio]{
+    width: 15px;
+    height: 15px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .button-save{
@@ -212,11 +219,155 @@ span a{
     margin-top: 18px;
 }
 
+/****************CHAT*************/
+
+h1 {
+    text-align: center;
+    color: black;
+    width: 100%;
+}
+
+#chat-form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.chat-input input {
+    padding: 10px;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    background-color: #f0f0f5;
+}
+
+.button-chat {
+    border: 0;
+    margin-left: 10px;
+    display: inline-flex;
+    background-color: rgba(240, 236, 236, 0);
+}
+
+img {
+    width: 25px;
+    height: 25px;
+    border: 0;
+}
+
+.message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.messages{
+    width: 400px;
+    height: 400px;
+    margin-bottom: 10px;
+    border: 0;
+    border-radius: 20px;
+    background-color: #5aa1d4;
+    color: white;
+    text-align: center;
+}
 /**************RESPONSIVIDADE**************/
 
 @media (max-width: 540px) {
     span h2 {
         margin-top: 100px;
+    }
+
+    .chat-form{
+        display: flex;
+    }
+
+    .chat-input {
+        width: 50%;
+        margin-right: 5px;
+    }
+
+    .chat-input input:nth-child(1) {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 540px) {
+    nav {
+        display: none;
+    }
+
+    .one,
+    .two,
+    .three {
+        background-color: #111111;
+        height: 5px;
+        width: 100%;
+        margin: 6px auto;
+
+        transition-duration: 0.3s;
+    }
+
+    .menu-toggle {
+        width: 40px;
+        height: 30px;
+        margin-right: 20px;
+        margin-bottom: 15px;
+    }
+
+    /* fullscreen */
+    .menu-section.on {
+        position: absolute;
+        top:0;
+        left:0;
+        
+        width: 100vw;
+        height: 100vh;
+
+        background-color: #5aa1d4;
+        
+        z-index: 10;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-section.on nav {
+        display: block;
+    }
+
+    .menu-section.on .menu-toggle {
+        position: absolute;
+        right: 25px;
+        top: 25px;
+    }
+
+    .menu-section.on .menu-toggle .one {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .menu-section.on .menu-toggle .two {
+        opacity: 0;
+    }
+
+    .menu-section.on .menu-toggle .three {
+        transform: rotate(-45deg) translate(8px, -9px);
+    }
+
+    .menu-section.on nav {
+        text-align: center;
+        display: block;
+    }
+
+    .menu-section.on nav a{
+        transition-duration: 0.5s;
+        font-size: 2rem;
+        line-height: 4rem;
+        display: block;
+        
     }
 
 }

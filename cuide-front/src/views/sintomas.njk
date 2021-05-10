@@ -1,0 +1,30 @@
+{%extends "home.njk"%}
+
+{%block content%}
+
+    <h1>Sintomas</h1>
+
+    <form action="/" method ="POST">
+        <main class="form-sintomas">
+            <div class="field">
+                <label for="body">Alterações no corpo?</label>
+                <div class="radio">                    
+                    <input type="radio" name="body" value="S">Sim                               
+                    <input type="radio" name="body" value="N">Não        
+                </div>
+            </div>
+        
+            <div class="field">
+                <label for="alteracoes">Onde são as alterações?</label>
+                <input type="text" name="alteracoes" required="required">
+            </div>
+
+            <div class="field">
+                <label for="dor">Sente dor? Onde?</label>
+                <input type="text" name="dor" required="required">
+            </div>
+
+            <button class="button-save">Salvar</button>
+        </main>
+    </form>
+{%endblock%}

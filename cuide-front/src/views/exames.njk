@@ -2,33 +2,32 @@
 
 
 {%block content%}
-
+        <h1>Exames</h1>
         <form action="/save" method ="POST">
             <main class="form-exames">
-                <h1>Exames</h1>
+                
 
-         <div class="field-group">
-                    <div class="field">
-                        <label for="name">Nome do exame:</label>
-                        <input type="text" name="name" required="required">
-                    </div>
+                <div class="field-group">
+                            <div class="field">
+                                <label for="exame">Nome do exame:</label>
+                                <input type="text" name="name" required="required">
+                            </div>
 
-                    <div class="field">
-                        <label for="name">Data do exame:</label>
-                        <input type="text" name="date" required="required">
-                    </div>
+                            <div class="field">
+                                <label for="date-exame">Data do exame:</label>
+                                <input type="date" name="date" required="required">
+                            </div>
 
-                    <div class="field">
-                        <label for="name">Local do exame:</label>
-                        <input type="text" name="local" required="required">
-                    </div>
+                            <div class="field">
+                                <label for="local-exame">Local do exame:</label>
+                                <input type="text" name="local" required="required">
+                            </div>
 
-         </div>
+                </div>
                     
                     
-                    <button class="button-save">Salvar</button>
-            </main>
+                <button class="button-save">Salvar</button>
+            </main>    
         
-        
-      </form>
-{%endblock%}
+        </form>
+{%endblock%
