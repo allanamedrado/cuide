@@ -3,7 +3,7 @@ const { on } = require("../config/db");
 
 module.exports = {
     index() {
-        http.get('http://localhost:8000/consulta', (res) => {
+        http.get('https://pokeapi.co/api/v2/pokemon/', (res) => {
             console.log(res);
 
         }).on("error", (err) => {
