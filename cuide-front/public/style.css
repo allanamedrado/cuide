@@ -1,5 +1,5 @@
 *{    
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -242,6 +242,7 @@ h1 {
     border-radius: 20px;
     outline: none;
     background-color: #f0f0f5;
+    width: 100%;
 }
 
 .button-chat {
@@ -261,17 +262,86 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #5aa1d4;
+    overflow: scroll;
+    width: 100%;
 }
 
 .messages{
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    height: 60vh;
     margin-bottom: 10px;
     border: 0;
     border-radius: 20px;
     background-color: #5aa1d4;
+    /*background-color: #5aa1d4;*/
+    overflow: scroll;
     color: white;
     text-align: center;
+}
+.msg{
+    text-align: justify;
+}
+
+.chat {
+    list-style: none;
+    background: none;
+    margin: 0;
+    padding: 0 0 50px 0;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.chat li {
+    padding: 0.5rem;
+    overflow: hidden;
+    display: flex;
+}
+
+.other .msg {
+    order: 1;
+    border-top-left-radius: 0px;
+    box-shadow: -1px 2px 0px #D4D4D4;
+}
+.other:before {
+    content: "";
+    position: relative;
+    top: 0px;
+    right: 0px;
+    left: 40px;
+    width: 0px;
+    height: 0px;
+    border: 5px solid #fff;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.self {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.self .msg {
+    order: 1;
+    border-bottom-right-radius: 0px;
+    box-shadow: 1px 2px 0px #D4D4D4;
+}
+
+.msg span {
+    font-size: 0.7rem;
+    color: #969898;
+}
+
+.msg {
+    background: white;
+    min-width: 50px;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.07);
+}
+.msg p {
+    font-size: 0.8rem;
+    margin: 0 0 0.2rem 0;
+    color: #777;
 }
 /**************RESPONSIVIDADE**************/
 
@@ -285,7 +355,7 @@ img {
     }
 
     .chat-input {
-        width: 50%;
+        width: 100%;
         margin-right: 5px;
     }
 
