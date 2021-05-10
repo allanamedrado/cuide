@@ -8,20 +8,6 @@ module.exports = {
   
 index(req) {
 
-const hostname = 'http://pokeapi.co/api/v2/pokemon/';
-
-
-request(`${hostname}`, (err, res, body) => {
-  console.log(body);
-  });
-
-
-
-    
-
-
-  
-
 
 }
 

@@ -18,17 +18,17 @@ class ConsultaController extends AbstractController
     /**
      * @Route("/", name="consulta_index", methods={"GET"})
      */
-    public function index(): Response
+    public function index(): JsonResponse
     {
         $consultas = $this->getDoctrine()->getManager()
             ->getRepository(Consulta::class)
             ->findAll();
-        $arrayConsultas = [];
-        foreach ($consultas as $c){
-            array_push($arrayConsultas, $c->toArray());
-        }
-        return new JsonResponse($arrayConsultas, Response::HTTP_OK);
-
+        $arrayConsultas = ['infor' => 'mação'];
+//        foreach ($consultas as $c){
+//            array_push($arrayConsultas, $c->toArray());
+//        }
+//        return new JsonResponse($arrayConsultas, Response::HTTP_OK);
+        return $this->json($arrayConsultas);
     }
 
     /**

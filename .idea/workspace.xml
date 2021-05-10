@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a85fb80-c076-4031-b245-59b6e67bea65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuide-front/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuide-front/src/app/controllers/cuidador.js" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/app/controllers/cuidador.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuide-front/src/views/cuidador.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/cuidador.njk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/create.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/create.njk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/edit.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/edit.njk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/index.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/index.njk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/show.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/cuidadores/show.njk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuide-front/src/views/home.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/home.njk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/cuidador.njk" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/cuidador.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/.env" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-api/src/Controller/ConsultaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-api/src/Controller/ConsultaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuide-front/src/app/controllers/consulta.js" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/app/controllers/consulta.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,9 +93,15 @@
       <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/property-access" />
       <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/property-info" />
       <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/serializer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1rwWpTSZAt7SANuKzSiyVSe5hvT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -134,5 +134,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
