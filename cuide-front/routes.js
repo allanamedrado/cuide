@@ -1,5 +1,6 @@
 const express = require('express')
 const cuidadores = require('./src/app/controllers/cuidador')
+const consulta = require('./src/app/controllers/consulta')
 const routes = express.Router()
 
 
@@ -30,6 +31,7 @@ routes.get("/idoso", function(req, res) {
 routes.get("/cuidadores/create", function(req, res) {
     return res.render("cuidadores/create")
 })
+routes.get("/consulta", consulta.index)
 
 routes.get("/cuidadores/index", cuidadores.index)
 routes.get("/cuidadores/create", cuidadores.create)
@@ -38,6 +40,7 @@ routes.get("/cuidadores/:id/edit", cuidadores.edit)
 routes.post("/cuidadores", cuidadores.post)
 routes.put("/cuidadores", cuidadores.update)
 routes.delete("/cuidadores", cuidadores.delete)
+
 
 
 module.exports = routes
