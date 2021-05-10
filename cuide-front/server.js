@@ -6,7 +6,9 @@ const methodOverride = require('method-override')
 const app = express()
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
+const cors = require('cors');
 
+app.use(cors())
 app.use(express.urlencoded({extended: true}))
 app.use(methodOverride('_method'))
 app.use(routes)

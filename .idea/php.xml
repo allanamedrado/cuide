@@ -79,6 +79,7 @@
       <path value="$PROJECT_DIR$/cuide-api/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/cuide-api/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/cuide-api/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/cuide-api/vendor/nelmio/cors-bundle" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
