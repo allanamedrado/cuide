@@ -78,6 +78,17 @@ class UsuarioController extends AbstractController
         return new JsonResponse(['status' => 'Usuario atualizado'], Response::HTTP_OK);
     }
     /**
+     * @Route("/{usuario}/getuser", name="get_user", methods={"GET"})
+     */
+    public function getUserWithUsername(Request $request, $usuario): JsonResponse
+    {
+        $usuario = $this->getDoctrine()->getManager()->getRepository(Usuario::class)
+            ->findOneBy(['usuario' => $usuario]);
+
+        return new JsonResponse(['idusuario' => $usuario->getIdusuario(), 'categoria' => $usuario->getCategoria()], Response::HTTP_OK);
+
+    }
+    /**
      * @Route("/login", name="login", methods={"POST"})
      */
     public function login(Request $request): JsonResponse
@@ -118,9 +129,7 @@ class UsuarioController extends AbstractController
      */
     public function getSession(Request $request): JsonResponse
     {
-        var_dump($request->getSession()->get('usuario'));
-        die;
-
+        
         return new JsonResponse(
             [
                 'usuario' => $request->getSession()->get('usuario'),
