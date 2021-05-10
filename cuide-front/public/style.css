@@ -261,6 +261,8 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #5aa1d4;
+    overflow: scroll;
 }
 
 .messages{
@@ -270,8 +272,12 @@ img {
     border: 0;
     border-radius: 20px;
     background-color: #5aa1d4;
+    /*background-color: #5aa1d4;*/
     color: white;
-    text-align: center;
+    text-align: center
+}
+.msg{
+    text-align: justify;
 }
 /**************RESPONSIVIDADE**************/
 

@@ -44,7 +44,7 @@
 <script>
     async function getContent(){
         try{
-            const response = await fetch('http://localhost:8000/usuario');
+            const response = await fetch('http://localhost:8000/consulta');
             const data = await response.json();
             console.log(data);
         }catch(error){
