@@ -103,7 +103,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cuide-front/public/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/public/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cuide-front/src/views/chat.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/chat.njk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cuide-front/src/views/consultas.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/consultas.njk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cuide-front/src/views/home.njk" beforeDir="false" afterPath="$PROJECT_DIR$/cuide-front/src/views/home.njk" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

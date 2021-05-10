@@ -55,7 +55,7 @@
    <script>
         var socket = io('http://localhost:5000');
         function renderMessage(message){
-            $('.messages').append('<div class="msg"><strong>'+message.author+'</strong>'+message.message+'</div>');
+            $('.chat').append('<li class="self"><div class="msg"><span>'+message.author+':</span>    <p>' + message.message + '</div></li>');
         }
         socket.on('previousMessages', messages => {
             for (message of messages){
@@ -63,7 +63,8 @@
             }
         });
         socket.on('receiveMessage', message => {
-            renderMessage(message, "other");
+            $('.chat').append('<li class="other"><div class="msg"><span>'+message.author+':</span>    <p>' + message.message + '</div></li>');
+            //renderMessage(message);
         })
         $('#chat-form').submit((e) => {
             e.preventDefault();
